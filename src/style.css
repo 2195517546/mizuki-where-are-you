@@ -4,7 +4,14 @@
   padding: 0;
 }
 
+html {
+  /* prevent iOS font size adjustment on rotation */
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
   -webkit-font-smoothing: antialiased;
+  /* prevent double-tap zoom on buttons globally */
+  touch-action: manipulation;
 }

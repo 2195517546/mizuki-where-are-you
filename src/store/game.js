@@ -3,7 +3,12 @@ import { ref, computed } from 'vue'
 
 const STORAGE_KEY = 'mzk-game-progress'
 
+function consentAllowed() {
+  return localStorage.getItem('mzk-consent') === 'yes'
+}
+
 function loadSaved() {
+  if (!consentAllowed()) return null
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     return raw ? JSON.parse(raw) : null
@@ -14,17 +19,15 @@ function loadSaved() {
 
 export const useGameStore = defineStore('game', () => {
   const saved = loadSaved()
-  // completedLevels: array of completed level numbers e.g. [1, 2, 3]
   const completedLevels = ref(saved?.completedLevels ?? [])
 
   function persist() {
+    if (!consentAllowed()) return
     localStorage.setItem(STORAGE_KEY, JSON.stringify({ completedLevels: completedLevels.value }))
   }
 
-  // true if player has started at least one level
   const hasProgress = computed(() => completedLevels.value.length > 0)
 
-  // the next level to play (1-10)
   const nextLevel = computed(() => {
     if (completedLevels.value.length === 0) return 1
     const maxDone = Math.max(...completedLevels.value)
@@ -45,7 +48,7 @@ export const useGameStore = defineStore('game', () => {
 
   function reset() {
     completedLevels.value = []
-    localStorage.removeItem(STORAGE_KEY)
+    if (consentAllowed()) localStorage.removeItem(STORAGE_KEY)
   }
 
   return { completedLevels, hasProgress, nextLevel, completeLevel, isLevelUnlocked, reset }

@@ -1,0 +1,375 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "text": "周末你更喜欢？",
+      "options": [
+        { "label": "出门逛街，和朋友一起玩", "traits": { "social": 1, "energetic": 1 } },
+        { "label": "在家躺平，做自己的事", "traits": { "alone": 1, "calm": 1 } },
+        { "label": "看情况，有时出门有时宅", "traits": { "normal": 1 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "面对新事物时，你会？",
+      "options": [
+        { "label": "立刻行动，边做边学", "traits": { "action": 1, "fast": 1 } },
+        { "label": "先观察思考，再决定", "traits": { "think": 1, "slow": 1 } },
+        { "label": "问问别人的经验再说", "traits": { "social": 1, "follow": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "你的朋友圈风格是？",
+      "options": [
+        { "label": "经常发，分享日常", "traits": { "share": 1, "expressive": 1 } },
+        { "label": "很少发，只看不说", "traits": { "lurk": 1, "reserved": 1 } },
+        { "label": "偶尔发点有意思的", "traits": { "normal": 1, "playful": 1 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "遇到困难时，你倾向于？",
+      "options": [
+        { "label": "找朋友倾诉求助", "traits": { "social": 1, "share": 1 } },
+        { "label": "自己默默解决", "traits": { "alone": 1, "reserved": 1 } },
+        { "label": "先自己试试，不行再求助", "traits": { "think": 1, "normal": 1 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "你更喜欢哪种表达方式？",
+      "options": [
+        { "label": "直接说出来", "traits": { "direct": 1, "expressive": 1 } },
+        { "label": "用表情包或暗示", "traits": { "indirect": 1, "playful": 1 } },
+        { "label": "看对象和场合决定", "traits": { "normal": 1, "think": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "看到有趣的东西，你会？",
+      "options": [
+        { "label": "马上分享给朋友", "traits": { "share": 1, "social": 1 } },
+        { "label": "自己偷偷收藏", "traits": { "collect": 1, "alone": 1 } },
+        { "label": "发个朋友圈让大家看看", "traits": { "share": 1, "expressive": 1 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "你的生活节奏是？",
+      "options": [
+        { "label": "快节奏，喜欢忙碌", "traits": { "fast": 1, "energetic": 1 } },
+        { "label": "慢节奏，享受平静", "traits": { "slow": 1, "calm": 1 } },
+        { "label": "忙闲结合，张弛有度", "traits": { "normal": 1, "think": 1 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "面对规则，你会？",
+      "options": [
+        { "label": "遵守规则，按部就班", "traits": { "follow": 1, "normal": 1 } },
+        { "label": "打破常规，另辟蹊径", "traits": { "break": 1, "weird": 1 } },
+        { "label": "灵活变通，看情况调整", "traits": { "think": 1, "playful": 1 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "你更喜欢什么样的内容？",
+      "options": [
+        { "label": "正常的、易懂的", "traits": { "normal": 1, "follow": 1 } },
+        { "label": "抽象的、怪核的", "traits": { "weird": 1, "break": 1 } },
+        { "label": "有趣的、新奇的", "traits": { "playful": 1, "energetic": 1 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "你的情绪表达方式是？",
+      "options": [
+        { "label": "明显外露，容易被看出来", "traits": { "expressive": 1, "direct": 1 } },
+        { "label": "内敛隐藏，不轻易表现", "traits": { "reserved": 1, "calm": 1 } },
+        { "label": "看心情和对象", "traits": { "normal": 1 } }
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "在聚会上，你通常是？",
+      "options": [
+        { "label": "话题中心，带动气氛", "traits": { "social": 1, "energetic": 1, "expressive": 1 } },
+        { "label": "安静观察，偶尔插话", "traits": { "alone": 1, "reserved": 1, "think": 1 } },
+        { "label": "跟着大家一起嗨", "traits": { "social": 1, "normal": 1 } }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "你对突发状况的反应是？",
+      "options": [
+        { "label": "兴奋刺激，想看看会怎样", "traits": { "action": 1, "playful": 1, "break": 1 } },
+        { "label": "紧张不安，希望恢复正常", "traits": { "calm": 1, "follow": 1, "reserved": 1 } },
+        { "label": "冷静应对，想办法解决", "traits": { "think": 1, "normal": 1 } }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "你更倾向于？",
+      "options": [
+        { "label": "脚踏实地，稳扎稳打", "traits": { "follow": 1, "normal": 1, "slow": 1 } },
+        { "label": "天马行空，自由飞翔", "traits": { "break": 1, "weird": 1, "fast": 1 } },
+        { "label": "有目标但也灵活", "traits": { "think": 1, "normal": 1 } }
+      ]
+    },
+    {
+      "id": "q14",
+      "text": "别人对你的第一印象通常是？",
+      "options": [
+        { "label": "开朗活泼，容易接近", "traits": { "social": 1, "energetic": 1, "expressive": 1 } },
+        { "label": "神秘安静，不太好懂", "traits": { "alone": 1, "reserved": 1, "weird": 1 } },
+        { "label": "友好温和，挺好相处", "traits": { "normal": 1, "calm": 1 } }
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "你更喜欢哪种思考方式？",
+      "options": [
+        { "label": "逻辑清晰，条理分明", "traits": { "think": 1, "follow": 1, "normal": 1 } },
+        { "label": "跳跃发散，天马行空", "traits": { "break": 1, "weird": 1, "playful": 1 } },
+        { "label": "直觉感性，凭感觉走", "traits": { "action": 1, "playful": 1 } }
+      ]
+    },
+    {
+      "id": "q16",
+      "text": "面对冲突，你会？",
+      "options": [
+        { "label": "直接对峙，说清楚", "traits": { "direct": 1, "expressive": 1, "action": 1 } },
+        { "label": "回避冷处理，等时间解决", "traits": { "reserved": 1, "calm": 1, "think": 1 } },
+        { "label": "找个合适的时机沟通", "traits": { "think": 1, "normal": 1 } }
+      ]
+    },
+    {
+      "id": "q17",
+      "text": "你的能量来源是？",
+      "options": [
+        { "label": "和人互动，越聊越嗨", "traits": { "social": 1, "energetic": 1, "share": 1 } },
+        { "label": "独处充电，安静恢复", "traits": { "alone": 1, "calm": 1, "reserved": 1 } },
+        { "label": "做喜欢的事就有能量", "traits": { "normal": 1, "playful": 1 } }
+      ]
+    },
+    {
+      "id": "q18",
+      "text": "你对艺术作品的偏好是？",
+      "options": [
+        { "label": "写实美观，看得懂", "traits": { "normal": 1, "follow": 1 } },
+        { "label": "抽象实验，有冲击力", "traits": { "weird": 1, "break": 1 } },
+        { "label": "有趣好玩，能引起共鸣", "traits": { "playful": 1, "social": 1 } }
+      ]
+    },
+    {
+      "id": "q19",
+      "text": "你更容易被什么吸引？",
+      "options": [
+        { "label": "温暖治愈的东西", "traits": { "calm": 1, "normal": 1, "social": 1 } },
+        { "label": "刺激新奇的东西", "traits": { "energetic": 1, "weird": 1, "playful": 1 } },
+        { "label": "有深度有内涵的东西", "traits": { "think": 1, "alone": 1 } }
+      ]
+    },
+    {
+      "id": "q20",
+      "text": "你的行动模式是？",
+      "options": [
+        { "label": "想到就做，立刻行动", "traits": { "action": 1, "fast": 1, "energetic": 1 } },
+        { "label": "计划周全，再开始", "traits": { "think": 1, "slow": 1, "follow": 1 } },
+        { "label": "边做边调整", "traits": { "normal": 1, "playful": 1 } }
+      ]
+    }
+  ],
+  "mzkTypes": {
+    "开心mzk": {
+      "name": "开心mzk",
+      "subtitle": "纯真乐天派",
+      "description": "永远的快乐喷泉，只要有可爱的衣服和甜点就能原地复活。",
+      "keywords": ["快乐", "乐观", "治愈"],
+      "image": "https://faceround.cn/games/find-mzk/开心mzk.png",
+      "cluster": "活力现充星团",
+      "traits": { "social": 3, "energetic": 3, "expressive": 3, "normal": 2 }
+    },
+    "讲话mzk": {
+      "name": "讲话mzk",
+      "subtitle": "安利达人",
+      "description": "你的话匣子一旦打开就关不上，特别是在聊起时尚周边的时候。",
+      "keywords": ["健谈", "分享", "热情"],
+      "image": "https://faceround.cn/games/find-mzk/讲话mzk.png",
+      "cluster": "活力现充星团",
+      "traits": { "social": 3, "share": 3, "direct": 3, "expressive": 3 }
+    },
+    "走路mzk": {
+      "name": "走路mzk",
+      "subtitle": "行动派先锋",
+      "description": "不喜欢原地踏步，比起思考更愿意先跑起来看看风景。",
+      "keywords": ["行动力", "探索", "前进"],
+      "image": "https://faceround.cn/games/find-mzk/走路mzk.png",
+      "cluster": "活力现充星团",
+      "traits": { "action": 3, "fast": 3, "energetic": 2 }
+    },
+    "跑mzk": {
+      "name": "跑mzk",
+      "subtitle": "极速冲刺者",
+      "description": "速度就是一切，慢下来会死星人。",
+      "keywords": ["快速", "冲刺", "活力"],
+      "image": "https://faceround.cn/games/find-mzk/跑mzk.png",
+      "cluster": "活力现充星团",
+      "traits": { "action": 3, "fast": 3, "energetic": 3 }
+    },
+    "emumzk": {
+      "name": "emumzk",
+      "subtitle": "Wonderhoy! 感染者",
+      "description": "跨越了次元的活力，如果你抽到了这个，说明你今天的精神状态非常哇呼！",
+      "keywords": ["Wonderhoy", "活力", "感染力"],
+      "image": "https://faceround.cn/games/find-mzk/emumzk.png",
+      "cluster": "活力现充星团",
+      "traits": { "social": 3, "energetic": 3, "playful": 3, "expressive": 3 }
+    },
+    "呼啦啦mzk": {
+      "name": "呼啦啦mzk",
+      "subtitle": "气氛组组长",
+      "description": "不管场面多冷，你都能用奇怪的律动化解尴尬。",
+      "keywords": ["气氛", "律动", "化解"],
+      "image": "https://faceround.cn/games/find-mzk/呼啦啦mzk.png",
+      "cluster": "活力现充星团",
+      "traits": { "social": 3, "playful": 3, "energetic": 2, "weird": 1 }
+    },
+    "倒立mzk": {
+      "name": "倒立mzk",
+      "subtitle": "逻辑逆转者",
+      "description": "别人走路，你走钢丝；别人看世界，你颠倒世界。反向思维的神。",
+      "keywords": ["逆向", "颠倒", "独特"],
+      "image": "https://faceround.cn/games/find-mzk/倒立mzk.png",
+      "cluster": "物理掉线星团",
+      "traits": { "break": 3, "weird": 3, "think": 2, "alone": 2 }
+    },
+    "倒立走mzk": {
+      "name": "倒立走mzk",
+      "subtitle": "反重力行者",
+      "description": "不仅要颠倒，还要边颠倒边前进。",
+      "keywords": ["反重力", "前进", "坚持"],
+      "image": "https://faceround.cn/games/find-mzk/倒立走mzk.png",
+      "cluster": "物理掉线星团",
+      "traits": { "break": 3, "weird": 3, "action": 2, "fast": 1 }
+    },
+    "右立mzk": {
+      "name": "右立mzk",
+      "subtitle": "偏离航线者",
+      "description": "总是能在寻常的生活中找到那个侧向的切入点。",
+      "keywords": ["侧向", "偏离", "切入"],
+      "image": "https://faceround.cn/games/find-mzk/右立mzk.png",
+      "cluster": "物理掉线星团",
+      "traits": { "break": 3, "weird": 2, "think": 2, "alone": 2 }
+    },
+    "飞行mzk": {
+      "name": "飞行mzk",
+      "subtitle": "自由梦想家",
+      "description": "脚踏实地太累了，你只想在赛博空间里自由滑翔。",
+      "keywords": ["自由", "飞翔", "梦想"],
+      "image": "https://faceround.cn/games/find-mzk/飞行mzk.png",
+      "cluster": "物理掉线星团",
+      "traits": { "break": 3, "weird": 2, "fast": 2, "alone": 2 }
+    },
+    "偷听mzk": {
+      "name": "偷听mzk",
+      "subtitle": "情报局局长",
+      "description": "不小心路过，不小心听见，不小心就掌握了你的所有把柄。",
+      "keywords": ["情报", "观察", "隐秘"],
+      "image": "https://faceround.cn/games/find-mzk/偷听mzk.png",
+      "cluster": "混沌恶作剧星团",
+      "traits": { "lurk": 3, "collect": 3, "reserved": 2, "playful": 2 }
+    },
+    "吐舌mzk": {
+      "name": "吐舌mzk",
+      "subtitle": "调皮小恶魔",
+      "description": "挑衅只是为了看你脸红，是那种让人恨不起来的捣蛋鬼。",
+      "keywords": ["调皮", "挑衅", "可爱"],
+      "image": "https://faceround.cn/games/find-mzk/吐舌mzk.png",
+      "cluster": "混沌恶作剧星团",
+      "traits": { "playful": 3, "indirect": 2, "expressive": 2, "social": 1 }
+    },
+    "惊吓mzk": {
+      "name": "惊吓mzk",
+      "subtitle": "戏精本体",
+      "description": "擅长制造突发状况，虽然有时候会被自己吓到。",
+      "keywords": ["戏精", "突发", "夸张"],
+      "image": "https://faceround.cn/games/find-mzk/惊吓mzk.png",
+      "cluster": "混沌恶作剧星团",
+      "traits": { "expressive": 3, "playful": 3, "action": 2, "social": 1 }
+    },
+    "鲨鱼mzk": {
+      "name": "鲨鱼mzk",
+      "subtitle": "赛博掠食者",
+      "description": "可爱的外表下藏着尖牙，攻击性（指吐槽能力）极强。",
+      "keywords": ["尖锐", "吐槽", "攻击性"],
+      "image": "https://faceround.cn/games/find-mzk/鲨鱼mzk.png",
+      "cluster": "混沌恶作剧星团",
+      "traits": { "direct": 3, "playful": 2, "expressive": 2, "break": 1 }
+    },
+    "松鼠mzk": {
+      "name": "松鼠mzk",
+      "subtitle": "囤积狂魔",
+      "description": "收集癖晚期患者，看到喜欢的东西就想藏起来。像松鼠一样把宝贝都藏好，但经常忘记藏在哪里。",
+      "keywords": ["收集", "囤积", "可爱"],
+      "image": "https://faceround.cn/games/find-mzk/松鼠mzk.png",
+      "cluster": "混沌恶作剧星团",
+      "traits": { "collect": 3, "alone": 2, "playful": 2, "reserved": 2 }
+    },
+    "大眼mzk": {
+      "name": "大眼mzk",
+      "subtitle": "真实之眼",
+      "description": "一直在注视，从未被理解。你是那个能一眼看穿虚伪的人。",
+      "keywords": ["注视", "洞察", "真实"],
+      "image": "https://faceround.cn/games/find-mzk/大眼mzk.png",
+      "cluster": "抽象深渊星团",
+      "traits": { "alone": 3, "think": 3, "weird": 3, "reserved": 3 }
+    },
+    "怪核mzk": {
+      "name": "怪核mzk",
+      "subtitle": "超现实主义者",
+      "description": "你的存在本身就是一种艺术，不需要逻辑，只需要感觉。",
+      "keywords": ["怪核", "超现实", "艺术"],
+      "image": "https://faceround.cn/games/find-mzk/怪核mzk.png",
+      "cluster": "抽象深渊星团",
+      "traits": { "weird": 3, "break": 3, "alone": 2, "think": 2 }
+    },
+    "打坐mzk": {
+      "name": "打坐mzk",
+      "subtitle": "禅修瑞希",
+      "description": "在喧闹的世界中心原地飞升，内心毫无波动甚至有点想吃拉面。",
+      "keywords": ["禅修", "平静", "佛系"],
+      "image": "https://faceround.cn/games/find-mzk/打坐mzk.png",
+      "cluster": "抽象深渊星团",
+      "traits": { "calm": 3, "alone": 3, "slow": 3, "reserved": 3 }
+    },
+    "通通mzk": {
+      "name": "通通mzk",
+      "subtitle": "不可名状者",
+      "description": "通通！通通！一种魔性的重复，你是那种能让人产生精神污染（褒义）的存在。",
+      "keywords": ["魔性", "重复", "精神污染"],
+      "image": "https://faceround.cn/games/find-mzk/通通mzk.png",
+      "cluster": "抽象深渊星团",
+      "traits": { "weird": 3, "break": 3, "indirect": 2, "playful": 2 }
+    },
+    "普通mzk": {
+      "name": "普通mzk",
+      "subtitle": "平和观测者",
+      "description": "虽然看起来很普通，但其实是在默默守护大家。",
+      "keywords": ["平和", "守护", "温柔"],
+      "image": "https://faceround.cn/games/find-mzk/普通mzk.png",
+      "cluster": "情绪基准星团",
+      "traits": { "normal": 3, "calm": 2, "reserved": 2, "follow": 2 }
+    },
+    "生气mzk": {
+      "name": "生气mzk",
+      "subtitle": "正义的小炮仗",
+      "description": "非常有原则，被踩到红线时会像气球一样瞬间炸裂。",
+      "keywords": ["原则", "正义", "爆发"],
+      "image": "https://faceround.cn/games/find-mzk/生气mzk.png",
+      "cluster": "情绪基准星团",
+      "traits": { "direct": 3, "expressive": 3, "action": 2, "normal": 1 }
+    }
+  }
+}
