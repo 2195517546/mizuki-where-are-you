@@ -1,0 +1,12 @@
+{
+  "games": [
+    {
+      "id": "minesweeper",
+      "name": "扫晓山瑞希",
+      "description": "经典扫雷游戏",
+      "icon": "💣",
+      "route": "/minigame/mine-clearance",
+      "enabled": true
+    }
+  ]
+}

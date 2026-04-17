@@ -10,7 +10,7 @@
       />
 
       <h1 class="title">测测你是哪种晓山瑞希</h1>
-      <p class="subtitle">20种瑞希，找到属于你的那个MZK</p>
+      <p class="subtitle">{{ mzkCount }}种瑞希，找到属于你的那个MZK</p>
 
       <div class="btns">
         <button class="btn btn-main" @click="startTest">开始测试</button>
@@ -20,89 +20,9 @@
       <div class="card intro-content">
         <h2>🎀 可测出的MZK类型</h2>
         <div class="mzk-list">
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/开心mzk.png" alt="开心mzk" />
-            <span>开心mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/讲话mzk.png" alt="讲话mzk" />
-            <span>讲话mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/走路mzk.png" alt="走路mzk" />
-            <span>走路mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/跑mzk.png" alt="跑mzk" />
-            <span>跑mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/emumzk.png" alt="emumzk" />
-            <span>emumzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/呼啦啦mzk.png" alt="呼啦啦mzk" />
-            <span>呼啦啦mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/倒立mzk.png" alt="倒立mzk" />
-            <span>倒立mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/倒立走mzk.png" alt="倒立走mzk" />
-            <span>倒立走mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/右立mzk.png" alt="右立mzk" />
-            <span>右立mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/飞行mzk.png" alt="飞行mzk" />
-            <span>飞行mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/偷听mzk.png" alt="偷听mzk" />
-            <span>偷听mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/吐舌mzk.png" alt="吐舌mzk" />
-            <span>吐舌mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/惊吓mzk.png" alt="惊吓mzk" />
-            <span>惊吓mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/鲨鱼mzk.png" alt="鲨鱼mzk" />
-            <span>鲨鱼mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/松鼠mzk.png" alt="松鼠mzk" />
-            <span>松鼠mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/大眼mzk.png" alt="大眼mzk" />
-            <span>大眼mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/怪核mzk.png" alt="怪核mzk" />
-            <span>怪核mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/打坐mzk.png" alt="打坐mzk" />
-            <span>打坐mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/通通mzk.png" alt="通通mzk" />
-            <span>通通mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/普通mzk.png" alt="普通mzk" />
-            <span>普通mzk</span>
-          </div>
-          <div class="mzk-item">
-            <img src="https://faceround.cn/games/find-mzk/生气mzk.png" alt="生气mzk" />
-            <span>生气mzk</span>
+          <div v-for="(mzk, name) in testData.mzkTypes" :key="name" class="mzk-item">
+            <img :src="mzk.image" :alt="mzk.name" />
+            <span>{{ mzk.name }}</span>
           </div>
         </div>
       </div>
@@ -190,6 +110,10 @@ const currentScreen = ref('intro')
 const currentQuestionIndex = ref(0)
 const answers = ref({})
 const result = ref(null)
+
+const mzkCount = computed(() => {
+  return Object.keys(testData.mzkTypes).length
+})
 
 const currentQuestion = computed(() => {
   return testData.questions[currentQuestionIndex.value]

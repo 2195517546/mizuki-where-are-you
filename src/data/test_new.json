@@ -484,8 +484,8 @@
       "cluster": "活力现充星团",
       "traits": {
         "social": 2,
-        "share": 1,
-        "direct": 1,
+        "share": 2,
+        "direct": 2,
         "expressive": 2
       }
     },
@@ -502,9 +502,8 @@
       "cluster": "活力现充星团",
       "traits": {
         "action": 2,
-        "energetic": 1,
-        "normal": 1,
-        "slow": 1
+        "fast": 2,
+        "energetic": 2
       }
     },
     "跑mzk": {
@@ -608,10 +607,10 @@
       "image": "https://faceround.cn/games/find-mzk/右立mzk.png",
       "cluster": "物理掉线星团",
       "traits": {
-        "break": 1,
-        "weird": 1,
-        "playful": 2,
-        "think": 1
+        "break": 2,
+        "weird": 2,
+        "think": 1,
+        "alone": 1
       }
     },
     "飞行mzk": {
@@ -664,8 +663,8 @@
       "traits": {
         "playful": 2,
         "expressive": 2,
-        "indirect": 1,
-        "social": 1
+        "social": 1,
+        "normal": 1
       }
     },
     "惊吓mzk": {
@@ -827,24 +826,6 @@
         "direct": 2,
         "expressive": 2,
         "action": 2,
-        "normal": 1
-      }
-    },
-    "肌肉mzk": {
-      "name": "肌肉mzk",
-      "subtitle": "自律健身狂魔",
-      "description": "每天健身打卡，蛋白粉不离手。你相信身体是革命的本钱，用强大的自律和行动力塑造完美体魄。你的生活充满活力和正能量，总是精力充沛地迎接每一天的挑战。健身房是你的第二个家，汗水是你最好的勋章。",
-      "keywords": [
-        "健身",
-        "自律",
-        "活力"
-      ],
-      "image": "https://faceround.cn/games/find-mzk/肌肉mzk.jpg",
-      "cluster": "社交活力星团",
-      "traits": {
-        "action": 2,
-        "energetic": 2,
-        "follow": 1,
         "normal": 1
       }
     }

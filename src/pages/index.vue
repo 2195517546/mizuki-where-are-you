@@ -3,10 +3,12 @@ import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGameStore } from '../store/game.js'
 import LevelSelect from '../components/LevelSelect.vue'
+import minigames from '../data/minigames.json'
 
 const router = useRouter()
 const store = useGameStore()
 const showSelect = ref(false)
+const showMinigames = ref(false)
 const weirdMode = ref(false)
 
 onMounted(() => {
@@ -53,12 +55,36 @@ function clearSave() {
       <button v-if="store.hasProgress" class="btn btn-new" @click="router.push('/1')">新游戏</button>
       <button class="btn btn-secondary" @click="showSelect = true">选 关</button>
       <button class="btn btn-secondary" @click="router.push('/mzk-test')">测试你是哪种晓山瑞希</button>
+      <button class="btn btn-secondary" @click="showMinigames = true">更多小游戏</button>
     </div>
 
     <button class="btn-clear" @click="clearSave">清除存档</button>
   </div>
 
   <LevelSelect v-if="showSelect" @close="showSelect = false" />
+
+  <!-- Minigames Modal -->
+  <div v-if="showMinigames" class="modal-overlay" @click="showMinigames = false">
+    <div class="modal-content" @click.stop>
+      <h2 class="modal-title">更多小游戏</h2>
+      <div class="minigames-list">
+        <div
+          v-for="game in minigames.games"
+          :key="game.id"
+          class="minigame-item"
+          :class="{ disabled: !game.enabled }"
+          @click="game.enabled && router.push(game.route)"
+        >
+          <span class="game-icon">{{ game.icon }}</span>
+          <div class="game-info">
+            <h3>{{ game.name }}</h3>
+            <p>{{ game.description }}</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-secondary modal-close" @click="showMinigames = false">关闭</button>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -248,5 +274,104 @@ function clearSave() {
     width: auto;
     padding: 0 40px;
   }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  color: #F6B1B5;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.minigames-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.minigame-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 2px solid #F6B1B5;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+}
+
+.minigame-item:hover {
+  background: #ffe0e5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(246, 177, 181, 0.3);
+}
+
+.minigame-item:active {
+  transform: scale(0.98);
+}
+
+.minigame-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ddd;
+}
+
+.minigame-item.disabled:hover {
+  background: white;
+  transform: none;
+  box-shadow: none;
+}
+
+.game-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.game-info {
+  flex: 1;
+}
+
+.game-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.game-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.modal-close {
+  width: 100%;
 }
 </style>
