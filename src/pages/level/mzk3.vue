@@ -2,6 +2,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGameStore } from '../../store/game.js'
+import LoadingScreen from '../../components/LoadingScreen.vue'
 
 const router = useRouter()
 const store = useGameStore()
@@ -29,154 +30,112 @@ const gameOver = ref(false)
 const won = ref(false)
 let timer = null
 
-// 生成棋盘 - 保证有解（逆向生成法）
-function generateGrid() {
-  // 从20种图片中随机选10种
+// 随机生成棋盘
+function randomGrid() {
   const shuffledTypes = [...MZK_TYPES].sort(() => Math.random() - 0.5)
   const selectedTypes = shuffledTypes.slice(0, TILE_COUNT)
 
-  // 创建配对的方块
   const tiles = []
   selectedTypes.forEach(type => {
     tiles.push({ type, id: Math.random() })
     tiles.push({ type, id: Math.random() })
   })
 
-  // 初始化空棋盘
+  // 洗牌
+  for (let i = tiles.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [tiles[i], tiles[j]] = [tiles[j], tiles[i]]
+  }
+
   const newGrid = []
+  let idx = 0
   for (let r = 0; r < ROWS; r++) {
     newGrid[r] = []
     for (let c = 0; c < COLS; c++) {
-      newGrid[r][c] = null
+      newGrid[r][c] = tiles[idx++]
     }
   }
+  return newGrid
+}
 
-  // 获取所有空位置
-  function getEmptyPositions() {
-    const positions = []
-    for (let r = 0; r < ROWS; r++) {
-      for (let c = 0; c < COLS; c++) {
-        if (newGrid[r][c] === null) {
-          positions.push([r, c])
-        }
-      }
+// 用求解器检查棋盘是否有解（贪心模拟：反复找可连接的配对并消除）
+function isSolvable(testGrid) {
+  // 深拷贝棋盘（只需要 type 和是否存在）
+  const g = testGrid.map(row => row.map(cell => cell ? cell.type : null))
+
+  function hClear(r, c1, c2) {
+    if (r < 0 || r >= ROWS) return true
+    const [s, e] = c1 < c2 ? [c1, c2] : [c2, c1]
+    for (let c = s + 1; c < e; c++) {
+      if (c >= 0 && c < COLS && g[r][c] !== null) return false
     }
-    return positions
+    return true
   }
-
-  // 检查两个位置是否可以连接（使用临时棋盘）
-  function canConnectTemp(r1, c1, r2, c2) {
-    // 直线连接
-    if (r1 === r2 && isHorizontalClearTemp(r1, c1, c2)) {
-      return true
+  function vClear(c, r1, r2) {
+    if (c < 0 || c >= COLS) return true
+    const [s, e] = r1 < r2 ? [r1, r2] : [r2, r1]
+    for (let r = s + 1; r < e; r++) {
+      if (r >= 0 && r < ROWS && g[r][c] !== null) return false
     }
-    if (c1 === c2 && isVerticalClearTemp(c1, r1, r2)) {
-      return true
-    }
-
+    return true
+  }
+  function canLink(r1, c1, r2, c2) {
+    if (r1 === r2 && hClear(r1, c1, c2)) return true
+    if (c1 === c2 && vClear(c1, r1, r2)) return true
     // 一个转角
-    const corner1Empty = newGrid[r1][c2] === null
-    const corner2Empty = newGrid[r2][c1] === null
-
-    if (corner1Empty && isHorizontalClearTemp(r1, c1, c2) && isVerticalClearTemp(c2, r1, r2)) {
-      return true
-    }
-    if (corner2Empty && isVerticalClearTemp(c1, r1, r2) && isHorizontalClearTemp(r2, c1, c2)) {
-      return true
-    }
-
+    if ((r1 !== r2 || c1 !== c2) && g[r1]?.[c2] === null && hClear(r1, c1, c2) && vClear(c2, r1, r2)) return true
+    if ((r1 !== r2 || c1 !== c2) && g[r2]?.[c1] === null && vClear(c1, r1, r2) && hClear(r2, c1, c2)) return true
     // 两个转角（横-竖-横）
     for (let r = -1; r <= ROWS; r++) {
-      const corner1Empty = (r < 0 || r >= ROWS || c1 < 0 || c1 >= COLS) || newGrid[r][c1] === null
-      const corner2Empty = (r < 0 || r >= ROWS || c2 < 0 || c2 >= COLS) || newGrid[r][c2] === null
-
-      if (corner1Empty && corner2Empty &&
-          isVerticalClearTemp(c1, Math.min(r1, r), Math.max(r1, r)) &&
-          isVerticalClearTemp(c2, Math.min(r2, r), Math.max(r2, r)) &&
-          isHorizontalClearTemp(r, c1, c2)) {
-        return true
-      }
+      const e1 = (r < 0 || r >= ROWS || c1 < 0 || c1 >= COLS) || g[r][c1] === null
+      const e2 = (r < 0 || r >= ROWS || c2 < 0 || c2 >= COLS) || g[r][c2] === null
+      if (e1 && e2 && vClear(c1, Math.min(r1, r), Math.max(r1, r)) && vClear(c2, Math.min(r2, r), Math.max(r2, r)) && hClear(r, c1, c2)) return true
     }
-
     // 两个转角（竖-横-竖）
     for (let c = -1; c <= COLS; c++) {
-      const corner1Empty = (c < 0 || c >= COLS || r1 < 0 || r1 >= ROWS) || newGrid[r1][c] === null
-      const corner2Empty = (c < 0 || c >= COLS || r2 < 0 || r2 >= ROWS) || newGrid[r2][c] === null
-
-      if (corner1Empty && corner2Empty &&
-          isHorizontalClearTemp(r1, Math.min(c1, c), Math.max(c1, c)) &&
-          isHorizontalClearTemp(r2, Math.min(c2, c), Math.max(c2, c)) &&
-          isVerticalClearTemp(c, Math.min(r1, r2), Math.max(r1, r2))) {
-        return true
-      }
+      const e1 = (c < 0 || c >= COLS || r1 < 0 || r1 >= ROWS) || g[r1][c] === null
+      const e2 = (c < 0 || c >= COLS || r2 < 0 || r2 >= ROWS) || g[r2][c] === null
+      if (e1 && e2 && hClear(r1, Math.min(c1, c), Math.max(c1, c)) && hClear(r2, Math.min(c2, c), Math.max(c2, c)) && vClear(c, Math.min(r1, r2), Math.max(r1, r2))) return true
     }
-
     return false
   }
 
-  function isHorizontalClearTemp(r, c1, c2) {
-    if (r < 0 || r >= ROWS) return true
-    const [start, end] = c1 < c2 ? [c1, c2] : [c2, c1]
-    for (let c = start + 1; c < end; c++) {
-      if (c >= 0 && c < COLS && newGrid[r][c] !== null) return false
-    }
-    return true
-  }
+  // 反复寻找可消除的配对
+  let remaining = g.flat().filter(x => x !== null).length
+  while (remaining > 0) {
+    let found = false
+    // 收集所有非空格子
+    const cells = []
+    for (let r = 0; r < ROWS; r++)
+      for (let c = 0; c < COLS; c++)
+        if (g[r][c] !== null) cells.push([r, c])
 
-  function isVerticalClearTemp(c, r1, r2) {
-    if (c < 0 || c >= COLS) return true
-    const [start, end] = r1 < r2 ? [r1, r2] : [r2, r1]
-    for (let r = start + 1; r < end; r++) {
-      if (r >= 0 && r < ROWS && newGrid[r][c] !== null) return false
-    }
-    return true
-  }
-
-  // 逆向生成：每次放置一对可连接的方块
-  for (let i = 0; i < tiles.length; i += 2) {
-    const tile1 = tiles[i]
-    const tile2 = tiles[i + 1]
-
-    let placed = false
-    let attempts = 0
-    const maxAttempts = 100
-
-    while (!placed && attempts < maxAttempts) {
-      attempts++
-      const emptyPos = getEmptyPositions()
-
-      if (emptyPos.length < 2) break
-
-      // 随机选择两个空位置
-      const idx1 = Math.floor(Math.random() * emptyPos.length)
-      const [r1, c1] = emptyPos[idx1]
-
-      emptyPos.splice(idx1, 1)
-
-      const idx2 = Math.floor(Math.random() * emptyPos.length)
-      const [r2, c2] = emptyPos[idx2]
-
-      // 检查这两个位置是否可以连接
-      if (canConnectTemp(r1, c1, r2, c2)) {
-        newGrid[r1][c1] = tile1
-        newGrid[r2][c2] = tile2
-        placed = true
+    // 尝试所有配对
+    for (let i = 0; i < cells.length && !found; i++) {
+      for (let j = i + 1; j < cells.length && !found; j++) {
+        const [r1, c1] = cells[i]
+        const [r2, c2] = cells[j]
+        if (g[r1][c1] === g[r2][c2] && canLink(r1, c1, r2, c2)) {
+          g[r1][c1] = null
+          g[r2][c2] = null
+          remaining -= 2
+          found = true
+        }
       }
     }
-
-    // 如果尝试多次仍无法放置，随机放置
-    if (!placed) {
-      const emptyPos = getEmptyPositions()
-      if (emptyPos.length >= 2) {
-        const [r1, c1] = emptyPos[0]
-        const [r2, c2] = emptyPos[1]
-        newGrid[r1][c1] = tile1
-        newGrid[r2][c2] = tile2
-      }
-    }
+    if (!found) return false // 无法消除任何一对，无解
   }
+  return true
+}
 
-  return newGrid
+// 生成保证有解的棋盘
+function generateGrid() {
+  let attempt = 0
+  while (true) {
+    const g = randomGrid()
+    attempt++
+    if (isSolvable(g) || attempt > 200) return g
+  }
 }
 
 // 检查两点是否可以连接
@@ -368,6 +327,7 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <LoadingScreen text="正在连接晓山瑞希" />
   <!-- 顶部栏 -->
   <header class="top-bar">
     <router-link class="home-link" to="/index">

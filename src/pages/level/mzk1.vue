@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGameStore } from '../../store/game.js'
+import LoadingScreen from '../../components/LoadingScreen.vue'
 
 const router = useRouter()
 const store = useGameStore()
@@ -81,6 +82,7 @@ function onFound() {
 </script>
 
 <template>
+  <LoadingScreen text="正在找到晓山瑞希" />
   <!-- 顶部说明栏 -->
   <header class="top-bar">
     <router-link class="home-link" to="/index">

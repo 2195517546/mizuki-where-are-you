@@ -3,9 +3,11 @@ import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGameStore } from '../../store/game.js'
 import forumData from '../../data/forum.json'
+import LoadingScreen from '../../components/LoadingScreen.vue'
 
 const router = useRouter()
 const store = useGameStore()
+const won = ref(false)
 
 const BASE = 'https://faceround.cn/games/find-mzk/'
 
@@ -36,10 +38,8 @@ function handleSearch() {
   // 检查是否输入通关密钥
   if (query === 'dingding10') {
     store.completeLevel(5)
-    // 设置诡异模式标记（一次性）
     sessionStorage.setItem('showWeirdMode', 'true')
-    // 跳转到首页
-    router.push('/index')
+    won.value = true
     return
   }
 
@@ -92,18 +92,22 @@ function avatarUrl(path) {
   return `${BASE}${path}`
 }
 
-// 返回关卡选择
-function goBack() {
-  router.push('/')
-}
 </script>
 
 <template>
+  <LoadingScreen text="正在加载中" />
   <div class="forum-container">
-    <!-- 顶部导航 -->
-    <header class="forum-header">
-      <button class="back-btn" @click="goBack">← 返回</button>
-      <h1 class="forum-title">晓山瑞希论坛</h1>
+    <!-- 顶部栏（与其他关卡一致） -->
+    <header class="top-bar">
+      <router-link class="home-link" to="/index">
+        <img class="home-link-icon" src="https://faceround.cn/games/find-mzk/%E5%A4%A7%E7%9C%BCmzk.png" alt="首页" />
+        <span class="home-link-text">首页</span>
+      </router-link>
+      <div class="hint">
+        <span class="hint-title">调查晓山瑞希</span>
+        <span class="hint-sub">在论坛中找到关键线索！</span>
+      </div>
+      <span class="level-tag">第 5 关</span>
     </header>
 
     <!-- 搜索栏 -->
@@ -281,6 +285,27 @@ function goBack() {
       </div>
     </div>
   </div>
+
+  <!-- 通关弹窗 -->
+  <Teleport to="body">
+    <div v-if="won" class="overlay">
+      <div class="result-wrapper">
+        <div class="result-mzk-wrap">
+          <img class="result-mzk" :src="`${BASE}生气mzk.png`" alt="生气mzk" />
+          <img class="result-mzk result-mzk-glitch" :src="`${BASE}怪核mzk.png`" alt="怪核mzk" />
+        </div>
+        <div class="result-card eerie">
+          <h2 class="result-title">你找到了隐藏线索！</h2>
+          <p class="result-sub">第 5 关 · 调查晓山瑞希 · 通关</p>
+          <p class="result-eerie">这已经是最后一关了。</p>
+          <p class="result-eerie flicker">没有第六关。</p>
+          <div class="result-btns">
+            <button class="btn btn-home" @click="router.push('/index')">返回首页</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Teleport>
 </template>
 
 <style scoped>
@@ -290,37 +315,75 @@ function goBack() {
   padding-bottom: 40px;
 }
 
-/* 顶部导航 */
-.forum-header {
-  background: linear-gradient(135deg, #9b6dd6 0%, #7b4fb8 100%);
-  color: white;
-  padding: 16px 20px;
+/* 顶部栏（与其他关卡一致） */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
-  gap: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 12px;
+  padding: 8px 12px;
+  background: rgba(255, 240, 245, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid #f6c8cc;
 }
-
-.back-btn {
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.3s;
+@media (max-width: 640px) {
+  .top-bar { padding: 6px 10px; gap: 8px; }
 }
-
-.back-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+.home-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1.5px solid #f6c8cc;
+  color: #c07090;
+  font-size: 0.82rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  touch-action: manipulation;
+  transition: background 0.15s;
 }
-
-.forum-title {
-  font-size: 20px;
+@media (max-width: 640px) {
+  .home-link { padding: 4px 8px; font-size: 0.75rem; }
+}
+.home-link:active { background: #ffe0e8; }
+@media (hover: hover) { .home-link:hover { background: #ffe0e8; } }
+.home-link-icon { height: 1em; width: auto; object-fit: contain; flex-shrink: 0; }
+.hint {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+.hint-title { font-size: 0.95rem; font-weight: bold; color: #F6B1B5; }
+@media (max-width: 640px) { .hint-title { font-size: 0.8rem; } }
+.hint-sub {
+  font-size: 0.72rem;
+  color: #aaa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+@media (max-width: 640px) { .hint-sub { font-size: 0.65rem; } }
+.level-tag {
+  font-size: 0.78rem;
   font-weight: bold;
-  margin: 0;
+  color: #c07090;
+  background: #fff;
+  border: 1.5px solid #f6c8cc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
+@media (max-width: 640px) { .level-tag { font-size: 0.7rem; padding: 4px 8px; } }
 
 /* 搜索区域 */
 .search-section {
@@ -841,4 +904,102 @@ function goBack() {
     grid-template-columns: 1fr;
   }
 }
+
+/* ── 通关弹窗 ── */
+.overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 200; padding: 20px;
+  animation: overlay-glitch 5s infinite;
+}
+@keyframes overlay-glitch {
+  0%, 96.5% { background: rgba(0,0,0,0.55); }
+  97% { background: rgba(0,0,0,0.72); }
+  97.5% { background: rgba(0,0,0,0.45); }
+  98% { background: rgba(0,0,0,0.78); }
+  98.5% { background: rgba(0,0,0,0.5); }
+  99% { background: rgba(0,0,0,0.65); }
+  99.5% { background: rgba(0,0,0,0.55); }
+}
+.result-wrapper {
+  position: relative; width: min(380px, 100%);
+  display: flex; flex-direction: column; align-items: center;
+}
+.result-mzk-wrap {
+  position: relative; z-index: 2;
+  width: 120px; height: 120px;
+  margin-bottom: -60px;
+}
+.result-mzk {
+  position: absolute; inset: 0;
+  width: 120px; height: 120px; object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+.result-mzk-glitch {
+  opacity: 0;
+  animation: mzk-glitch 5s infinite;
+}
+@keyframes mzk-glitch {
+  0%, 96.5% { opacity: 0; transform: none; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2)); }
+  97% { opacity: 1; transform: scale(1.12) translate(-3px, 2px); filter: drop-shadow(0 0 10px rgba(255,0,0,0.5)); }
+  97.5% { opacity: 0.5; transform: scale(1.05) translate(4px, -1px); filter: drop-shadow(0 0 6px rgba(255,0,0,0.3)); }
+  98% { opacity: 1; transform: scale(1.18) translate(-2px, -3px); filter: drop-shadow(0 0 16px rgba(255,0,0,0.7)); }
+  98.5% { opacity: 0.3; transform: scale(0.97) translate(2px, 1px); filter: drop-shadow(0 0 4px rgba(255,0,0,0.2)); }
+  99% { opacity: 1; transform: scale(1.08); filter: drop-shadow(0 0 8px rgba(255,0,0,0.4)); }
+  99.5% { opacity: 0; transform: none; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2)); }
+}
+.result-card {
+  position: relative; z-index: 1; background: #fff; border-radius: 20px;
+  padding: 72px 24px 24px; width: 100%;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 12px; text-align: center;
+  animation: card-glitch 5s infinite;
+}
+@keyframes card-glitch {
+  0%, 96.5% { transform: none; box-shadow: none; }
+  97% { transform: translate(-2px, 1px); box-shadow: 0 0 15px rgba(255,0,0,0.15); }
+  97.5% { transform: translate(3px, -1px); }
+  98% { transform: translate(-1px, -2px); box-shadow: 0 0 25px rgba(255,0,0,0.25); }
+  98.5% { transform: translate(2px, 1px); }
+  99% { transform: translate(-1px, 0); box-shadow: 0 0 10px rgba(255,0,0,0.1); }
+  99.5% { transform: none; box-shadow: none; }
+}
+.result-title { font-size: 1.3rem; color: #F6B1B5; margin: 0; }
+.result-sub { font-size: 0.85rem; color: #aaa; margin: 0; }
+.result-eerie {
+  font-size: 0.82rem; color: #999; margin: 0;
+  transition: color 0.3s;
+}
+.result-eerie.flicker {
+  color: #c44; font-size: 0.78rem;
+  animation: eerie-flicker 3s infinite;
+}
+@keyframes eerie-flicker {
+  0%, 100% { opacity: 1; }
+  40% { opacity: 1; }
+  42% { opacity: 0.2; }
+  44% { opacity: 1; }
+  80% { opacity: 1; }
+  82% { opacity: 0.3; }
+  83% { opacity: 1; }
+}
+.result-btns {
+  display: flex; flex-direction: column; gap: 10px;
+  width: 100%; margin-top: 8px;
+}
+.btn {
+  width: 100%; min-height: 48px; border-radius: 32px; border: none;
+  font-size: 1rem; cursor: pointer; touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent; transition: transform 0.15s;
+}
+@media (max-width: 640px) { .btn { min-height: 42px; font-size: 0.9rem; } }
+.btn:active { transform: scale(0.97); }
+.btn-next {
+  background: linear-gradient(135deg, #F6B1B5, #d97ca8);
+  color: #fff; font-weight: bold;
+}
+.btn-home {
+  background: transparent; border: 2px solid #ddd; color: #888;
+}
+@media (min-width: 400px) { .result-btns { flex-direction: row; } }
 </style>

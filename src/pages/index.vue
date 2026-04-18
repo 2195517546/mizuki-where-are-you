@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGameStore } from '../store/game.js'
 import LevelSelect from '../components/LevelSelect.vue'
@@ -11,6 +11,60 @@ const showSelect = ref(false)
 const showMinigames = ref(false)
 const weirdMode = ref(false)
 
+// ─── 恐怖内容免责声明 ───
+const DISCLAIMER_KEY = 'mzk-disclaimer-accepted'
+const showDisclaimer = ref(!localStorage.getItem(DISCLAIMER_KEY))
+
+function acceptDisclaimer() {
+  localStorage.setItem(DISCLAIMER_KEY, 'true')
+  showDisclaimer.value = false
+}
+
+// ─── 全关通关结算画面 ───
+const showEndScreen = ref(false)
+const BG_SLIDES = [
+  { src: 'https://faceround.cn/games/find-mzk/调查04.jpg', flash: 'https://faceround.cn/games/find-mzk/调查4.jpg' },
+  { src: 'https://faceround.cn/games/find-mzk/调查05.jpg', flash: null },
+  { src: 'https://faceround.cn/games/find-mzk/调查06.jpg', flash: null },
+  { src: 'https://faceround.cn/games/find-mzk/调查03.jpg', flash: null },
+]
+const currentSlide = ref(0)
+const slideOpacity = ref(1)
+const flashImage = ref('')
+const showFlash = ref(false)
+let slideshowTimer = null
+
+function startSlideshow() {
+  currentSlide.value = 0
+  slideOpacity.value = 1
+  advanceSlide()
+}
+function advanceSlide() {
+  slideshowTimer = setTimeout(() => {
+    const slide = BG_SLIDES[currentSlide.value]
+    if (slide.flash) {
+      flashImage.value = slide.flash
+      showFlash.value = true
+      setTimeout(() => { showFlash.value = false }, 200)
+    }
+    slideOpacity.value = 0
+    setTimeout(() => {
+      currentSlide.value = (currentSlide.value + 1) % BG_SLIDES.length
+      slideOpacity.value = 1
+      advanceSlide()
+    }, 1200)
+  }, 3000)
+}
+function stopSlideshow() {
+  if (slideshowTimer) { clearTimeout(slideshowTimer); slideshowTimer = null }
+}
+function closeEndScreen() {
+  showEndScreen.value = false
+  stopSlideshow()
+}
+
+onUnmounted(() => { stopSlideshow() })
+
 onMounted(() => {
   // 检查是否需要显示诡异模式（仅一次）
   if (sessionStorage.getItem('showWeirdMode') === 'true') {
@@ -20,8 +74,15 @@ onMounted(() => {
   }
 })
 
+const allCleared = () => store.completedLevels.includes(6)
+
 function startOrContinue() {
-  router.push(`/${store.nextLevel}`)
+  if (allCleared()) {
+    showEndScreen.value = true
+    startSlideshow()
+  } else {
+    router.push(`/${store.nextLevel}`)
+  }
 }
 
 function clearSave() {
@@ -62,6 +123,37 @@ function clearSave() {
   </div>
 
   <LevelSelect v-if="showSelect" @close="showSelect = false" />
+
+  <!-- 恐怖内容免责声明 -->
+  <Teleport to="body">
+    <div v-if="showDisclaimer" class="disclaimer-overlay">
+      <div class="disclaimer-card">
+        <span class="disclaimer-icon">⚠</span>
+        <h2 class="disclaimer-title">内容警告</h2>
+        <p class="disclaimer-text">
+          本游戏含有<strong>轻微恐怖元素</strong>，包括但不限于：突然闪烁的画面、诡异的图像与氛围、令人不安的视觉效果。
+        </p>
+        <p class="disclaimer-text">
+          如果你对此类内容感到不适，请谨慎游玩。
+        </p>
+        <p class="disclaimer-note">本游戏仅供娱乐，所有内容均为虚构。</p>
+        <button class="btn btn-main disclaimer-btn" @click="acceptDisclaimer">我已了解，继续游戏</button>
+      </div>
+    </div>
+  </Teleport>
+
+  <!-- 全关通关结算画面 -->
+  <Teleport to="body">
+    <div v-if="showEndScreen" class="end-screen">
+      <img class="end-bg" :src="BG_SLIDES[currentSlide].src" :style="{ opacity: slideOpacity }" alt="" />
+      <img v-if="showFlash" class="end-bg end-flash" :src="flashImage" alt="" />
+      <div class="end-text-wrap">
+        <h1 class="end-title">你已经通过所有关卡</h1>
+        <p class="end-subtitle">...真的是这样吗？</p>
+        <button class="btn btn-end" @click="closeEndScreen">返回首页</button>
+      </div>
+    </div>
+  </Teleport>
 
   <!-- Minigames Modal -->
   <div v-if="showMinigames" class="modal-overlay" @click="showMinigames = false">
@@ -373,5 +465,81 @@ function clearSave() {
 
 .modal-close {
   width: 100%;
+}
+
+/* ── 全关通关结算画面 ── */
+.end-screen {
+  position: fixed; inset: 0; z-index: 2000;
+  display: flex; align-items: center; justify-content: center;
+  background: #000; overflow: hidden;
+}
+.end-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; transition: opacity 1.2s ease;
+}
+.end-flash {
+  opacity: 1; filter: blur(4px) brightness(1.3);
+  animation: flash-pop 0.2s ease both; z-index: 1;
+}
+@keyframes flash-pop {
+  0% { opacity: 0; } 30% { opacity: 1; } 100% { opacity: 0; }
+}
+.end-text-wrap {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  text-align: center; padding: 20px;
+  animation: end-shake 0.5s infinite;
+}
+@keyframes end-shake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-5px, 5px) rotate(-2deg); }
+  75% { transform: translate(5px, -5px) rotate(2deg); }
+}
+.end-title {
+  font-size: clamp(1.6rem, 6vw, 2.4rem); font-weight: bold; color: #000; margin: 0;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5), 2px 2px 4px rgba(0,0,0,0.9);
+}
+.end-subtitle {
+  font-size: clamp(0.9rem, 3.5vw, 1.1rem); color: #000; margin: 0;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6), 1px 1px 3px rgba(0,0,0,0.8);
+}
+.btn-end {
+  margin-top: 12px; padding: 12px 36px; border-radius: 24px;
+  border: 2px solid rgba(0,0,0,0.5); background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  color: #000; font-size: 1rem; font-weight: bold; cursor: pointer;
+  text-shadow: 0 0 4px rgba(0,0,0,0.4); transition: background 0.2s;
+}
+.btn-end:active { background: rgba(255,255,255,0.3); }
+
+/* ── 恐怖内容免责声明 ── */
+.disclaimer-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.disclaimer-card {
+  background: #fff; border-radius: 20px;
+  padding: 32px 28px; width: min(400px, 100%);
+  display: flex; flex-direction: column; align-items: center;
+  gap: 12px; text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.disclaimer-icon {
+  font-size: 2.5rem; line-height: 1;
+}
+.disclaimer-title {
+  font-size: 1.3rem; color: #c44; margin: 0; font-weight: bold;
+}
+.disclaimer-text {
+  font-size: 0.88rem; color: #555; margin: 0; line-height: 1.6;
+}
+.disclaimer-text strong { color: #c44; }
+.disclaimer-note {
+  font-size: 0.75rem; color: #aaa; margin: 0;
+}
+.disclaimer-btn {
+  margin-top: 8px; width: 100%;
 }
 </style>

@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGameStore } from '../../store/game.js'
+import LoadingScreen from '../../components/LoadingScreen.vue'
 
 const router = useRouter()
 const store = useGameStore()
@@ -84,6 +85,7 @@ function handleClick(mzk) {
 </script>
 
 <template>
+  <LoadingScreen text="正在生成晓山瑞希" />
   <!-- 顶部说明栏 -->
   <header class="top-bar">
     <router-link class="home-link" to="/index">
@@ -281,6 +283,8 @@ function handleClick(mzk) {
   position: absolute;
   cursor: pointer;
   transition: transform 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .mzk-target {

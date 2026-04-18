@@ -3,6 +3,7 @@ import { ref, computed, onMounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGameStore } from '../../store/game.js'
 import messagesData from '../../data/messages.json'
+import LoadingScreen from '../../components/LoadingScreen.vue'
 
 const router = useRouter()
 const store = useGameStore()
@@ -13,10 +14,28 @@ const userInput = ref('')
 const won = ref(false)
 const chatContainer = ref(null)
 
-// 随机选择一个角色
+// 洗牌队列，遍历完所有角色后再重新洗牌，避免连续重复
+let characterQueue = []
+
+function shuffleQueue() {
+  const arr = [...messagesData]
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  // 如果洗牌后第一个和上一轮最后一个相同，把它挪到后面
+  if (currentCharacter.value && arr.length > 1 && arr[0] === currentCharacter.value) {
+    const swap = 1 + Math.floor(Math.random() * (arr.length - 1))
+    ;[arr[0], arr[swap]] = [arr[swap], arr[0]]
+  }
+  return arr
+}
+
 function selectRandomCharacter() {
-  const randomIndex = Math.floor(Math.random() * messagesData.length)
-  currentCharacter.value = messagesData[randomIndex]
+  if (characterQueue.length === 0) {
+    characterQueue = shuffleQueue()
+  }
+  currentCharacter.value = characterQueue.shift()
 
   // 添加开场白
   messages.value = [{
@@ -119,6 +138,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <LoadingScreen text="正在加载中" />
   <!-- 顶部栏 -->
   <header class="top-bar">
     <router-link class="home-link" to="/index">
@@ -552,6 +572,12 @@ onMounted(() => {
 
 .btn:active {
   transform: scale(0.97);
+}
+
+.btn-next {
+  background: linear-gradient(135deg, #F6B1B5, #d97ca8);
+  color: #fff;
+  font-weight: bold;
 }
 
 .btn-home {
