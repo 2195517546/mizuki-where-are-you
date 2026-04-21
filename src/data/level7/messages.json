@@ -1,0 +1,18 @@
+{
+  "conversation": [
+    { "from": "other", "text": "你不该来的。", "time": "00:00" },
+    { "from": "self",  "text": "你是谁？",      "time": "00:01" },
+    { "from": "other", "text": "我是这个系统的残留。mzk 已经不在了。", "time": "00:02" },
+    { "from": "other", "text": "如果你非要找他，试着把日期改成他的生日。", "time": "00:03" }
+  ],
+  "replies": [
+    { "key": "生日",     "text": "是的，把系统日期改到他的生日，一切会不一样。" },
+    { "key": "mzk",      "text": "你找他，他找你。" },
+    { "key": "出口",     "text": "出口不是出去，而是 欢迎你。" },
+    { "key": "ena",      "text": "我喜欢ENA！" },
+    { "key": "akiyama",  "text": "Akiyama Mizuki。" },
+    { "key": "dingding", "text": "这是之后才会用到的钥匙。记住它。" }
+  ],
+  "afterDateChangeReply": "你修改了日期。我们都知道了。请去终端执行 run escape.sh，root 密码是 mizuki_0827。",
+  "defaultReply": "……"
+}

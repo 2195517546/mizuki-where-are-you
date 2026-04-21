@@ -14,6 +14,22 @@ const userInput = ref('')
 const won = ref(false)
 const chatContainer = ref(null)
 
+// 关卡知识回复（所有mzk共享）
+const LEVEL_FACTS = {
+  '第一关': '第一关有91个眼镜哦！',
+  '眼镜': '第一关一共有91个眼镜！',
+  '第二关': '第二关有67个mzk呢！',
+  '第三关': '第三关有20个方块哦！',
+  '方块': '第三关有20个方块！',
+  '第四关': '第四关一共会遇见10个mzk！包括我哦～',
+  '第五关': '第五关有4篇帖子！',
+  '帖子': '第五关有4篇帖子哦！',
+  '第六关': '第六关的视频里有30个mzk！',
+  '视频': '第六关的视频里有30个mzk！',
+  '这里': '问我关于这里的一切我都知道哦～第一关有91个眼镜，第二关有67个mzk，第三关有20个方块，第四关有10个mzk，第五关有4篇帖子，第六关的视频有30个mzk！',
+  '关卡': '问我关于这里的一切我都知道哦～第一关有91个眼镜，第二关有67个mzk，第三关有20个方块，第四关有10个mzk，第五关有4篇帖子，第六关的视频有30个mzk！'
+}
+
 // 洗牌队列，遍历完所有角色后再重新洗牌，避免连续重复
 let characterQueue = []
 
@@ -38,10 +54,16 @@ function selectRandomCharacter() {
   currentCharacter.value = characterQueue.shift()
 
   // 添加开场白
-  messages.value = [{
-    type: 'character',
-    text: currentCharacter.value.greeting
-  }]
+  messages.value = [
+    {
+      type: 'character',
+      text: currentCharacter.value.greeting
+    },
+    {
+      type: 'character',
+      text: '问我关于这里的一切我都知道哦～'
+    }
+  ]
 }
 
 // 滚动到底部
@@ -64,7 +86,14 @@ function checkAnswer(input) {
 function getReply(input) {
   const lowerInput = input.toLowerCase()
 
-  // 检查是否匹配关键词
+  // 检查关卡知识
+  for (const [keyword, reply] of Object.entries(LEVEL_FACTS)) {
+    if (lowerInput.includes(keyword.toLowerCase())) {
+      return reply
+    }
+  }
+
+  // 检查是否匹配角色关键词
   for (const [keyword, reply] of Object.entries(currentCharacter.value.replies)) {
     if (lowerInput.includes(keyword.toLowerCase())) {
       return reply
@@ -156,7 +185,7 @@ onMounted(() => {
   <div class="game-container">
     <!-- 角色信息 -->
     <div v-if="currentCharacter" class="character-info">
-      <img :src="currentCharacter.avatar" :alt="currentCharacter.name" class="character-avatar" />
+      <img :src="currentCharacter.avatar" :alt="currentCharacter.name" class="character-avatar" @click="selectRandomCharacter" title="点击换一个mzk" />
       <span class="character-name">{{ currentCharacter.name }}</span>
     </div>
 
@@ -358,7 +387,10 @@ onMounted(() => {
   height: 48px;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  cursor: pointer;
+  transition: transform 0.15s;
 }
+.character-avatar:active { transform: scale(0.9); }
 
 .character-name {
   font-size: 1.1rem;

@@ -1,0 +1,26 @@
+{
+  "cdnBase": "https://faceround.cn/games/find-mzk/",
+  "daily": [
+    { "name": "IMG_0504.jpg", "url": "调查04.jpg", "type": "daily", "meta": "2025-05-04 / 街道" },
+    { "name": "IMG_0503.jpg", "url": "调查03.jpg", "type": "daily", "meta": "2025-05-03 / 秋千" },
+    { "name": "IMG_0831.jpg", "url": "调查002.jpg", "type": "daily", "meta": "你拍下了我" },
+    { "name": "IMG_0505.jpg", "url": "调查05.jpg", "type": "daily", "meta": "门" },
+    { "name": "IMG_0506.jpg", "url": "调查06.jpg", "type": "daily", "meta": "和25时一起回去的电车" }
+  ],
+  "mystery": [
+    { "name": "UNKNOWN_01.jpg", "url": "调查4.jpg", "type": "mystery", "meta": "空旷教室" },
+    { "name": "UNKNOWN_02.jpg", "url": "调查1.jpg", "type": "mystery", "meta": "走廊尽头" },
+    { "name": "UNKNOWN_03.jpg", "url": "调查5.jpg", "type": "mystery", "meta": "楼梯" },
+    { "name": "UNKNOWN_04.jpg", "url": "调查6.jpg", "type": "mystery", "meta": "模糊人影" },
+    { "name": "UNKNOWN_05.jpg", "url": "调查7.jpg", "type": "mystery", "meta": "倒影" },
+    { "name": "UNKNOWN_06.jpg", "url": "调查13.jpg", "type": "mystery", "meta": "不要回头" }
+  ],
+  "broken": [
+    { "name": "怪核mzk.png", "url": "怪核mzk.png", "type": "broken", "repairKey": "hello", "repairedNote": "密码的第一部分在日历的标记日里。" },
+    { "name": "普通ena.png", "url": "普通ena.png", "type": "broken", "repairKey": "ILOVEENA", "repairedNote": "他的罗马音首字母。" },
+    { "name": "开心mzk.png", "url": "开心mzk.png", "type": "broken", "repairKey": "普通", "repairedNote": "AM……然后四位数字。" }
+  ],
+  "hidden": [
+    { "name": "鲨鱼mzk.png", "url": "鲨鱼mzk.png", "type": "hidden", "meta": "尤珞理希真的不是糖黑" }
+  ]
+}

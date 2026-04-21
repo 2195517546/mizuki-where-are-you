@@ -12,6 +12,7 @@ const routes = [
   { path: '/4',  component: () => import('../pages/level/mzk4.vue') },
   { path: '/5',  component: () => import('../pages/level/mzk5.vue') },
   { path: '/6',  component: () => import('../pages/level/mzk6.vue') },
+  { path: '/6-end', component: () => import('../pages/level/mzk6-end.vue') },
   { path: '/7',  component: () => import('../pages/level/mzk7.vue') },
   { path: '/8',  component: () => import('../pages/level/mzk8.vue') },
   { path: '/9',  component: () => import('../pages/level/mzk9.vue') },

@@ -1,0 +1,14 @@
+[
+  { "id": "gallery",   "name": "相册",       "icon": "🖼️",  "corrupted": false },
+  { "id": "notes",     "name": "备忘录",     "icon": "📝",  "corrupted": false },
+  { "id": "browser",   "name": "浏览器",     "icon": "🌐",  "corrupted": false },
+  { "id": "files",     "name": "文件",       "icon": "📁",  "corrupted": false },
+  { "id": "messages",  "name": "短信",       "icon": "💬",  "corrupted": false },
+  { "id": "calendar",  "name": "日历",       "icon": "📅",  "corrupted": false },
+  { "id": "settings",  "name": "设置",       "icon": "⚙️",  "corrupted": false },
+  { "id": "phone",     "name": "电话",       "icon": "📞",  "corrupted": true  },
+  { "id": "camera",    "name": "相机",       "icon": "📷",  "corrupted": true  },
+  { "id": "music",     "name": "音乐",       "icon": "🎵",  "corrupted": true  },
+  { "id": "weather",   "name": "天气",       "icon": "☁️",  "corrupted": true  },
+  { "id": "mail",      "name": "邮件",       "icon": "📧",  "corrupted": true  }
+]

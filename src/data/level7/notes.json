@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "title": "购物清单",
+    "content": "牛奶、面包、软糖、电池\n\n",
+    "hiddenHint": "啊哦"
+  },
+  {
+    "id": 2,
+    "title": "歌词碎片",
+    "content": "这是什么眼神。果然是这种眼神。"
+  },
+  {
+    "id": 3,
+    "title": "梦的记录",
+    "content": "天台，风很大，不想回去。\n 是怪物还是梦 \n hello.....这是秘钥:hello。",
+    "locked": true,
+    "unlockHint": "我被拍到的日期",
+    "unlockAnswer": "0831"
+  },
+  {
+    "id": 4,
+    "title": "跟ena有关的秘钥序列",
+    "content": "I L O V E E N A"
+  },
+  {
+    "id": 5,
+    "title": "...",
+    "content": "你正在被注视。"
+  },
+  {
+    "id": 6,
+    "title": "待办事项",
+    "content": "1. 删除浏览记录\n2. 清空聊天\n3. 忘了\n"
+  },
+  {
+    "id": 7,
+    "title": "不要打开",
+    "content": "不要离开"
+  },
+  {
+    "id": 8,
+    "title": "系统日记",
+    "content": "@#%@#%@#%@#%@#%@#%@#%\n其中有一个mzk知道开心mzk的秘密，那个mzk的tag就是秘钥\n所有晓山瑞希类型：\n倒立mzk / 倒立走mzk / 偷听mzk / 右立mzk / 吐舌mzk / 呼啦啦mzk / 大眼mzk / 开心mzk / 怪核mzk / 惊吓mzk / 打坐mzk / 普通mzk / 生气mzk / 讲话mzk / 走路mzk / 跑mzk / 通通mzk / 飞行mzk / 鲨鱼mzk / emumzk\n@#%@#%@#%@#%@#%@#%@#%",
+    "locked": true,
+    "unlockHint": "输入晓山瑞希的名字（罗马音，小写，空格分隔）",
+    "unlockAnswer": "akiyama mizuki"
+  }
+]

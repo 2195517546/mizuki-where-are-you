@@ -80,6 +80,8 @@ function onFound() {
 function handleClick(mzk) {
   if (mzk.isTarget) {
     onFound()
+  } else if (!mzk.dismissed) {
+    mzk.dismissed = true
   }
 }
 </script>
@@ -107,7 +109,7 @@ function handleClick(mzk) {
       v-for="mzk in mzkList"
       :key="mzk.id"
       class="mzk-item"
-      :class="{ 'mzk-target': mzk.isTarget }"
+      :class="{ 'mzk-dismissed': mzk.dismissed }"
       :style="{
         left: `${mzk.x}%`,
         top: `${mzk.y}%`,
@@ -287,8 +289,14 @@ function handleClick(mzk) {
   user-select: none;
 }
 
-.mzk-target {
-  z-index: 100;
+.mzk-dismissed {
+  animation: spin-out 0.5s ease-in forwards;
+  pointer-events: none;
+}
+
+@keyframes spin-out {
+  0% { opacity: 1; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(720deg) scale(0); }
 }
 
 .mzk-item:active {

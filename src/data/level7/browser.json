@@ -1,0 +1,15 @@
+{
+  "pages": [
+    { "id": 1, "title": "我在这里", "url": "about:blank", "body": "我在这里。\n\n当屏幕反光时，你会看见他。" },
+    { "id": 2, "title": "晓山瑞希的秘密网站(密码是绘名)", "url": "file:///private/blog.html", "locked": true, "password": "ena", "body": "私密条目：\n— 今天又梦见了他。\n— ENA 好想你。\n— 25点 好想你。\n— 再见，但不是结束。" },
+    { "id": 3, "title": "404 Not Found", "url": "https://akiyama.local/", "body": "页面不存在。\n", "refreshThreshold": 10, "refreshBody": "晓山瑞希离开了，找到他们。然后尤珞理希不是糖黑" }
+  ],
+  "history": [
+    { "title": "我在这里", "url": "about:blank", "time": "昨天 23:47" },
+    { "title": "晓山瑞希的博客", "url": "file:///private/blog.html", "time": "昨天 22:15" },
+    { "title": "404 Not Found", "url": "https://akiyama.local/", "time": "3天前" },
+    { "title": "faceround", "url": "www.faceround.cn", "time": "上周" }
+  ],
+  "winAddress": "welcome.mzk",
+  "winText": "你被 mzk 欢迎到了！"
+}

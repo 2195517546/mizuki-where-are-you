@@ -74,15 +74,25 @@ onMounted(() => {
   }
 })
 
-const allCleared = () => store.completedLevels.includes(6)
+const allCleared = () => store.completedLevels.includes(7)
 
 function startOrContinue() {
   if (allCleared()) {
     showEndScreen.value = true
     startSlideshow()
+  } else if (localStorage.getItem('mzk-level6-endscreen-seen') === 'true' && !store.completedLevels.includes(7)) {
+    // 第六关结束画面看过了但第七关没通 → 回到独立结束画面，显示继续游戏小字
+    router.push('/6-end?from=index')
   } else {
     router.push(`/${store.nextLevel}`)
   }
+}
+
+function replayLevel7() {
+  store.resetLevel(7)
+  showEndScreen.value = false
+  stopSlideshow()
+  router.push('/7')
 }
 
 function clearSave() {
@@ -151,6 +161,7 @@ function clearSave() {
         <h1 class="end-title">你已经通过所有关卡</h1>
         <p class="end-subtitle">...真的是这样吗？</p>
         <button class="btn btn-end" @click="closeEndScreen">返回首页</button>
+        <p class="end-continue" @click="replayLevel7">继续游戏</p>
       </div>
     </div>
   </Teleport>
@@ -511,6 +522,11 @@ function clearSave() {
   text-shadow: 0 0 4px rgba(0,0,0,0.4); transition: background 0.2s;
 }
 .btn-end:active { background: rgba(255,255,255,0.3); }
+.end-continue {
+  margin-top: 16px; font-size: 0.85rem; color: rgba(0,0,0,0.6);
+  text-decoration: underline; cursor: pointer;
+}
+.end-continue:hover { color: #000; }
 
 /* ── 恐怖内容免责声明 ── */
 .disclaimer-overlay {

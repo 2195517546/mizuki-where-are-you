@@ -51,5 +51,10 @@ export const useGameStore = defineStore('game', () => {
     if (consentAllowed()) localStorage.removeItem(STORAGE_KEY)
   }
 
-  return { completedLevels, hasProgress, nextLevel, completeLevel, isLevelUnlocked, reset }
+  function resetLevel(n) {
+    completedLevels.value = completedLevels.value.filter(level => level !== n)
+    persist()
+  }
+
+  return { completedLevels, hasProgress, nextLevel, completeLevel, isLevelUnlocked, reset, resetLevel }
 })

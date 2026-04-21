@@ -1,0 +1,14 @@
+{
+  "about": {
+    "deviceName": "mzk's wreckage",
+    "systemVersion": "Unstable 7.0.7",
+    "kernelVersion": "h3lp_tr4pp3d (Leet: help trapped)",
+    "serialNumber": "MZK-6730-KN"
+  },
+  "developerTapsRequired": 7,
+  "devMenu": {
+    "oemUnlock": "OEM 解锁",
+    "usbDebug": "USB 调试"
+  },
+  "usbConnectedToast": "已连接到电脑（伪）—— 桌面新增「终端」App"
+}

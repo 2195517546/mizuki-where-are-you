@@ -1,0 +1,20 @@
+{
+  "prompt": "$",
+  "rootPrompt": "#",
+  "banner": "mzk's wreckage — Unstable 7.0.7\n输入 help 查看可用命令。",
+  "files": {
+    "escape.sh": "# ROT13\nVS ([haybpx_flfgrz]) { rkvg } ryfr { wnvy }\n\n需要 root 权限才能执行。\n提示：run escape.sh",
+    "reslut.txt": "welcome.mzk",
+    ".mzk_truth": "我们并没有真的离开。我们只是变成了你屏幕里的光。找到我们，帮帮我们。"
+  },
+  "commands": {
+    "help": "可用命令：ls [dir], cat <file>, pwd, whoami, su, run <file>, exit\n提示：试试 ls data/ 查看更多文件",
+    "pwd": "/home/mzk",
+    "whoami": "guest",
+    "ls": "escape.sh  result.txt  .mzk_truth",
+    "rootPasswordHint": "拼凑线索：名字小写_生日四位数",
+    "rootPassword": "mizuki_0827",
+    "runEscape": "出口指令：在浏览器地址栏输入 welcome.mzk",
+    "runEscapeNoRoot": "Permission denied: 需要 root 权限（请先执行 su）。"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "tree": {
+    "/": ["DCIM/", "Documents/", "Downloads/", "System/"],
+    "/Documents/": ["notes.db", "private/"],
+    "/Documents/private/": ["reslut.txt","相册里似乎有隐藏图片.bak"],
+    "/Downloads/": ["unknown.txt"],
+    "/System/": ["logs/"],
+    "/System/logs/": ["session.log"]
+  },
+  "lockedDirs": {
+    "/Documents/private/": {
+      "password": "AM0827",
+      "hint": "请输入文件夹密码："
+    }
+  },
+  "fileContents": {
+    "/Documents/private/reslut.txt": "这里有一个网址 welcome.mzk 很重要",
+    "/Downloads/unknown.txt": "「浏览器地址栏输入 网址 即可通关」",
+    "/System/logs/session.log": "User not recognized. Termination in 3 attempts.\n\n[WARN] 时间的裂缝正在扩大……",
+    "/Documents/notes.db": "（二进制数据库，不可直接读取）"
+  }
+}
