@@ -1,0 +1,12 @@
+{
+  "id": 8,
+  "title": "出道晓山瑞希",
+  "subtitle": "找到幕后凶手！！！！",
+  "world": "mzk和ena的世界",
+  "unlockCondition": "complete_level_7",
+  "initialMessage": {
+    "sender": "mzk市公安局",
+    "content": "【紧急报案】神山高中发现炸弹已被处理，但犯人身份不明。据初步调查，嫌疑人疑似'开心mzk'。请侦探mzk立即展开调查，找出真凶后将户籍信息发送至本号码。",
+    "time": "07:30"
+  }
+}

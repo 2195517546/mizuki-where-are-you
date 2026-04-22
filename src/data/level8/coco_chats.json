@@ -1,0 +1,159 @@
+{
+  "1930409680": {
+    "owner": "侦探mzk",
+    "nickname": "侦探_大王",
+    "chats": [
+      {
+        "contactId": 5,
+        "contactName": "█怪█核█",
+        "messages": [
+          {"sender": "侦探_大王","content": "你要的货我准备好了，自制炸弹，全套材料。","time": "2024-01-10 00:00","isDeleted": false},
+          {"sender": "█怪█核█","content": "钱我准备好了，目标神山高中，替罪羊选开心mzk。","time": "2024-01-10 00:02","isDeleted": false},
+          {"sender": "侦探_大王","content": "放心，我会接下这个案子，最后把你推出去，我全身而退。","time": "2024-01-10 00:05","isDeleted": false}
+        ]
+      }
+    ]
+  },
+  "2845612390": {
+    "owner": "开心mzk",
+    "nickname": "天天笑嘻嘻",
+    "chats": [
+      {
+        "contactId": 3, "contactName": "平平无奇小mzk",
+        "messages": [
+          {"sender": "天天笑嘻嘻","content": "明天社团活动正常吗？","time": "2024-01-18 16:10","isDeleted": false},
+          {"sender": "平平无奇小mzk","content": "正常呀，老地方","time": "2024-01-18 16:12","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "好耶！我准备了小零食～","time": "2024-01-18 16:13","isDeleted": false}
+        ]
+      },
+      {
+        "contactId": 4, "contactName": "耳朵尖尖",
+        "messages": [
+          {"sender": "耳朵尖尖","content": "你最近小心一点，有人在议论你。","time": "2024-01-19 18:00","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "啊？我怎么了嘛？","time": "2024-01-19 18:01","isDeleted": false},
+          {"sender": "耳朵尖尖","content": "没什么，你自己注意安全。","time": "2024-01-19 18:03","isDeleted": false}
+        ]
+      },
+      {
+        "contactId": 5, "contactName": "█怪█核█",
+        "messages": [
+          {"sender": "█怪█核█","content": "记得别穿帮","time": "2024-01-19 22:44","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "？？？你是谁？","time": "2024-01-19 22:46","isDeleted": false},
+          {"sender": "█怪█核█","content": "到时候你就知道了","time": "2024-01-19 22:47","isDeleted": false},
+          {"sender": "█怪█核█","content": "计划不变，放心。","time": "2024-01-20 00:12","isDeleted": true},
+          {"sender": "█怪█核█","content": "已经完成了","time": "2024-01-25 03:02","isDeleted": false},
+          {"sender": "█怪█核█","content": "大家都会以为是你做的","time": "2024-01-25 03:03","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "！！","time": "2024-01-25 07:18","isDeleted": false}
+        ]
+      },
+      {
+        "contactId": 6, "contactName": "深海鲨",
+        "messages": [
+          {"sender": "深海鲨","content": "货到了吗？","time": "2024-01-20 13:20","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "什么东西？我没买东西","time": "2024-01-20 13:22","isDeleted": false},
+          {"sender": "深海鲨","content": "别装了，那批材料","time": "2024-01-20 13:23","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "我真的不知道你在说什么","time": "2024-01-20 13:25","isDeleted": false},
+          {"sender": "深海鲨","content": "呵，你自己小心点","time": "2024-01-20 13:27","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "你为什么要害我？","time": "2024-01-21 09:10","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "我根本不知道什么炸弹！","time": "2024-01-21 09:11","isDeleted": false},
+          {"sender": "深海鲨","content": "谁让你天天那么开心","time": "2024-01-21 09:30","isDeleted": false},
+          {"sender": "深海鲨","content": "看着就烦","time": "2024-01-21 09:31","isDeleted": false}
+        ]
+      }
+    ]
+  },
+  "3301278456": {
+    "owner": "普通mzk", "nickname": "平平无奇小mzk",
+    "chats": [
+      { "contactId": 2, "contactName": "天天笑嘻嘻", "messages": [
+          {"sender": "天天笑嘻嘻","content": "明天社团活动正常吗？","time": "2024-01-18 16:10","isDeleted": false},
+          {"sender": "平平无奇小mzk","content": "正常呀，老地方","time": "2024-01-18 16:12","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "好耶！我准备了小零食～","time": "2024-01-18 16:13","isDeleted": false}
+      ]},
+      { "contactId": 4, "contactName": "耳朵尖尖", "messages": [
+          {"sender": "平平无奇小mzk","content": "你最近是不是又偷听了什么？","time": "2024-01-19 19:10","isDeleted": false},
+          {"sender": "耳朵尖尖","content": "不该问的别问。","time": "2024-01-19 19:11","isDeleted": false}
+      ]}
+    ]
+  },
+  "4509821367": {
+    "owner": "偷听mzk", "nickname": "耳朵尖尖",
+    "chats": [
+      { "contactId": 2, "contactName": "天天笑嘻嘻", "messages": [
+          {"sender": "耳朵尖尖","content": "你最近小心一点，有人在议论你。","time": "2024-01-19 18:00","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "啊？我怎么了嘛？","time": "2024-01-19 18:01","isDeleted": false},
+          {"sender": "耳朵尖尖","content": "没什么，你自己注意安全。","time": "2024-01-19 18:03","isDeleted": false}
+      ]},
+      { "contactId": 3, "contactName": "平平无奇小mzk", "messages": [
+          {"sender": "平平无奇小mzk","content": "你最近是不是又偷听了什么？","time": "2024-01-19 19:10","isDeleted": false},
+          {"sender": "耳朵尖尖","content": "不该问的别问。","time": "2024-01-19 19:11","isDeleted": false}
+      ]},
+      { "contactId": 5, "contactName": "█怪█核█", "messages": [
+          {"sender": "耳朵尖尖","content": "我听到你和深海鲨的对话了。","time": "2024-01-22 21:40","isDeleted": false},
+          {"sender": "█怪█核█","content": "……","time": "2024-01-22 21:41","isDeleted": false},
+          {"sender": "耳朵尖尖","content": "你们最好别乱来。","time": "2024-01-22 21:42","isDeleted": false},
+          {"sender": "█怪█核█","content": "管好你自己，地下室的人你惹不起。","time": "2024-01-22 21:45","isDeleted": false}
+      ]}
+    ]
+  },
+  "6712345098": {
+    "owner": "怪核mzk", "nickname": "█怪█核█",
+    "chats": [
+      { "contactId": 2, "contactName": "天天笑嘻嘻", "messages": [
+          {"sender": "█怪█核█","content": "记得别穿帮","time": "2024-01-19 22:44","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "？？？你是谁？","time": "2024-01-19 22:46","isDeleted": false},
+          {"sender": "█怪█核█","content": "到时候你就知道了","time": "2024-01-19 22:47","isDeleted": false},
+          {"sender": "█怪█核█","content": "计划不变，放心。","time": "2024-01-20 00:12","isDeleted": true},
+          {"sender": "█怪█核█","content": "已经完成了","time": "2024-01-25 03:02","isDeleted": false},
+          {"sender": "█怪█核█","content": "大家都会以为是你做的","time": "2024-01-25 03:03","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "！！","time": "2024-01-25 07:18","isDeleted": false}
+      ]},
+      { "contactId": 4, "contactName": "耳朵尖尖", "messages": [
+          {"sender": "耳朵尖尖","content": "我听到你和深海鲨的对话了。","time": "2024-01-22 21:40","isDeleted": false},
+          {"sender": "█怪█核█","content": "……","time": "2024-01-22 21:41","isDeleted": false},
+          {"sender": "耳朵尖尖","content": "你们最好别乱来。","time": "2024-01-22 21:42","isDeleted": false},
+          {"sender": "█怪█核█","content": "管好你自己，地下室的人你惹不起。","time": "2024-01-22 21:45","isDeleted": false}
+      ]},
+      { "contactId": 6, "contactName": "深海鲨", "messages": [
+          {"sender": "█怪█核█","content": "材料都准备好了吗？","time": "2024-01-15 14:00","isDeleted": false},
+          {"sender": "深海鲨","content": "早就齐了，就等你下令。","time": "2024-01-15 14:02","isDeleted": false},
+          {"sender": "█怪█核█","content": "目标：神山高中。替罪羊：天天笑嘻嘻。","time": "2024-01-15 14:05","isDeleted": false},
+          {"sender": "深海鲨","content": "明白，我会把东西送到他家门口。","time": "2024-01-15 14:07","isDeleted": false},
+          {"sender": "█怪█核█","content": "别留下痕迹。","time": "2024-01-15 14:10","isDeleted": false},
+          {"sender": "深海鲨","content": "放心，做完我就躲去港口。","time": "2024-01-15 14:11","isDeleted": false},
+          {"sender": "█怪█核█","content": "后续联系用邮箱 WeirdMZK@CoCo.com，CoCo上别再聊了。","time": "2024-01-15 14:13","isDeleted": false},
+          {"sender": "█怪█核█","content": "成功之后，我们平分好处。","time": "2024-01-20 01:10","isDeleted": false},
+          {"sender": "深海鲨","content": "东西我已经放他家门口了。","time": "2024-01-20 12:00","isDeleted": false},
+          {"sender": "█怪█核█","content": "很好，按计划进行。","time": "2024-01-20 12:05","isDeleted": false}
+      ]}
+    ]
+  },
+  "8934501276": {
+    "owner": "鲨鱼mzk", "nickname": "深海鲨",
+    "chats": [
+      { "contactId": 2, "contactName": "天天笑嘻嘻", "messages": [
+          {"sender": "深海鲨","content": "货到了吗？","time": "2024-01-20 13:20","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "什么东西？我没买东西","time": "2024-01-20 13:22","isDeleted": false},
+          {"sender": "深海鲨","content": "别装了，那批材料","time": "2024-01-20 13:23","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "我真的不知道你在说什么","time": "2024-01-20 13:25","isDeleted": false},
+          {"sender": "深海鲨","content": "呵，你自己小心点","time": "2024-01-20 13:27","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "你为什么要害我？","time": "2024-01-21 09:10","isDeleted": false},
+          {"sender": "天天笑嘻嘻","content": "我根本不知道什么炸弹！","time": "2024-01-21 09:11","isDeleted": false},
+          {"sender": "深海鲨","content": "谁让你天天那么开心","time": "2024-01-21 09:30","isDeleted": false},
+          {"sender": "深海鲨","content": "看着就烦","time": "2024-01-21 09:31","isDeleted": false}
+      ]},
+      { "contactId": 5, "contactName": "█怪█核█", "messages": [
+          {"sender": "█怪█核█","content": "材料都准备好了吗？","time": "2024-01-15 14:00","isDeleted": false},
+          {"sender": "深海鲨","content": "早就齐了，就等你下令。","time": "2024-01-15 14:02","isDeleted": false},
+          {"sender": "█怪█核█","content": "目标：神山高中。替罪羊：天天笑嘻嘻。","time": "2024-01-15 14:05","isDeleted": false},
+          {"sender": "深海鲨","content": "明白，我会把东西送到他家门口。","time": "2024-01-15 14:07","isDeleted": false},
+          {"sender": "█怪█核█","content": "别留下痕迹。","time": "2024-01-15 14:10","isDeleted": false},
+          {"sender": "深海鲨","content": "放心，做完我就躲去港口。","time": "2024-01-15 14:11","isDeleted": false},
+          {"sender": "█怪█核█","content": "后续联系用邮箱 WeirdMZK@CoCo.com，CoCo上别再聊了。","time": "2024-01-15 14:13","isDeleted": false},
+          {"sender": "█怪█核█","content": "成功之后，我们平分好处。","time": "2024-01-20 01:10","isDeleted": false},
+          {"sender": "深海鲨","content": "东西我已经放他家门口了。","time": "2024-01-20 12:00","isDeleted": false},
+          {"sender": "█怪█核█","content": "很好，按计划进行。","time": "2024-01-20 12:05","isDeleted": false}
+      ]}
+    ]
+  }
+}

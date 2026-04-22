@@ -43,6 +43,7 @@ export const useGameStore = defineStore('game', () => {
 
   function isLevelUnlocked(n) {
     if (n === 1) return true
+    if (n === 8) return completedLevels.value.includes(6)
     return completedLevels.value.includes(n - 1)
   }
 

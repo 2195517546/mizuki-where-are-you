@@ -74,7 +74,7 @@ onMounted(() => {
   }
 })
 
-const allCleared = () => store.completedLevels.includes(7)
+const allCleared = () => store.completedLevels.includes(8)
 
 function startOrContinue() {
   if (allCleared()) {
@@ -89,10 +89,10 @@ function startOrContinue() {
 }
 
 function replayLevel7() {
-  store.resetLevel(7)
+  store.resetLevel(8)
   showEndScreen.value = false
   stopSlideshow()
-  router.push('/7')
+  router.push('/8')
 }
 
 function clearSave() {

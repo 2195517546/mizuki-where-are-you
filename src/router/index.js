@@ -37,6 +37,9 @@ router.beforeEach((to) => {
   const id = Number(match[1])
   if (id <= 1) return true
 
+  // 第8关特殊：通过第6关即可进入
+  const requiredLevel = id === 8 ? 6 : id - 1
+
   // 直接从 localStorage 读取，避免依赖 Pinia 初始化顺序
   let completed = []
   try {
@@ -44,7 +47,7 @@ router.beforeEach((to) => {
     if (raw) completed = JSON.parse(raw).completedLevels || []
   } catch { /* ignore */ }
 
-  if (completed.includes(id - 1)) return true
+  if (completed.includes(requiredLevel)) return true
   // 未解锁，重定向到首页
   return '/index'
 })

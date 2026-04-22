@@ -1,0 +1,49 @@
+{
+  "SleuthMZK@CoCo.com": {
+    "owner": "侦探mzk", "nickname": "侦探_大王",
+    "inbox": [
+      { "id": "mail_hidden_001", "from": "未知用户", "fromEmail": "WeirdMZK@CoCo.com", "subject": "合作愉快", "time": "2024-01-12 00:00", "content": "货款已转，合作愉快，侦探先生。", "read": true },
+      { "id": "mail_hidden_002", "from": "系统邮件", "fromEmail": "bank@mzk-city.com", "subject": "到账通知", "time": "2024-01-12 00:01", "content": "您账户已收到匿名转账100000mzk币。", "read": true }
+    ]
+  },
+  "HappyMZK@CoCo.com": {
+    "owner": "开心mzk", "nickname": "天天笑嘻嘻",
+    "inbox": [
+      { "id": "mail_001", "from": "系统邮件", "fromEmail": "no-reply@comail.com", "subject": "欢迎使用CoMail！", "time": "2023-12-01 10:00", "content": "亲爱的天天笑嘻嘻，欢迎加入CoMail！", "read": true },
+      { "id": "mail_002", "from": "神山高中学生会", "fromEmail": "student@kamiko.ac.jp", "subject": "社团活动场地申请", "time": "2024-01-10 15:30", "content": "开心mzk同学，您的社团活动场地申请已通过。", "read": true },
+      { "id": "mail_003", "from": "█怪█核█", "fromEmail": "WeirdMZK@CoCo.com", "subject": "", "time": "2024-01-25 03:14", "content": "一切都结束了。\n警察会去找你的。\n谁让你住西区阳光花园。\n我住东区废弃仓库，没人会在意我。\n\n████████████████████", "read": false }
+    ]
+  },
+  "NormalMZK@CoCo.com": {
+    "owner": "普通mzk", "nickname": "平平无奇小mzk",
+    "inbox": [
+      { "id": "mail_001", "from": "系统邮件", "fromEmail": "no-reply@comail.com", "subject": "欢迎使用CoMail！", "time": "2023-11-05 09:20", "content": "亲爱的平平无奇小mzk，欢迎加入CoMail！", "read": true },
+      { "id": "mail_002", "from": "神山高中学生会", "fromEmail": "student@kamiko.ac.jp", "subject": "社团活动通知", "time": "2024-01-18 17:00", "content": "请各位社员明日准时参加活动。", "read": true },
+      { "id": "mail_003", "from": "耳朵尖尖", "fromEmail": "EavesdropMZK@CoCo.com", "subject": "提醒", "time": "2024-01-19 20:00", "content": "最近少管闲事，尤其是开心mzk的事。", "read": false }
+    ]
+  },
+  "EavesdropMZK@CoCo.com": {
+    "owner": "偷听mzk", "nickname": "耳朵尖尖",
+    "inbox": [
+      { "id": "mail_001", "from": "系统邮件", "fromEmail": "no-reply@comail.com", "subject": "欢迎使用CoMail！", "time": "2023-09-12 14:30", "content": "亲爱的耳朵尖尖，欢迎加入CoMail！", "read": true },
+      { "id": "mail_002", "from": "█怪█核█", "fromEmail": "WeirdMZK@CoCo.com", "subject": "警告", "time": "2024-01-23 00:10", "content": "不该听的别听，不该说的别说。\n不然下一个出事的就是你。", "read": false },
+      { "id": "mail_003", "from": "匿名", "fromEmail": "unknown@mail.com", "subject": "线索", "time": "2024-01-26 22:00", "content": "怪核mzk和鲨鱼mzk在港口仓库交易过可疑物品。", "read": false }
+    ]
+  },
+  "WeirdMZK@CoCo.com": {
+    "owner": "怪核mzk", "nickname": "█怪█核█",
+    "inbox": [
+      { "id": "mail_001", "from": "系统邮件", "fromEmail": "no-reply@comail.com", "subject": "欢迎使用CoMail！", "time": "2023-01-15 23:00", "content": "亲爱的█怪█核█，欢迎加入CoMail！", "read": true },
+      { "id": "mail_002", "from": "深海鲨", "fromEmail": "SharkMZK@CoCo.com", "subject": "材料确认", "time": "2024-01-15 15:00", "content": "材料已全部准备完毕，随时可以启动计划。\n目标：神山高中。\n替罪羊：开心mzk。", "read": true },
+      { "id": "mail_003", "from": "深海鲨", "fromEmail": "SharkMZK@CoCo.com", "subject": "投放完成", "time": "2024-01-20 12:30", "content": "已将包裹放在开心mzk家门口，无监控痕迹。", "read": true }
+    ]
+  },
+  "SharkMZK@CoCo.com": {
+    "owner": "鲨鱼mzk", "nickname": "深海鲨",
+    "inbox": [
+      { "id": "mail_001", "from": "系统邮件", "fromEmail": "no-reply@comail.com", "subject": "欢迎使用CoMail！", "time": "2023-02-20 16:40", "content": "亲爱的深海鲨，欢迎加入CoMail！", "read": true },
+      { "id": "mail_002", "from": "█怪█核█", "fromEmail": "WeirdMZK@CoCo.com", "subject": "计划执行", "time": "2024-01-15 14:30", "content": "按原计划进行，务必确保嫁祸成功。\n事后在港口分赃。", "read": true },
+      { "id": "mail_003", "from": "物流通知", "fromEmail": "logistics@mail.com", "subject": "包裹签收", "time": "2024-01-19 10:00", "content": "您的特殊包裹已签收，请注意查收。", "read": true }
+    ]
+  }
+}

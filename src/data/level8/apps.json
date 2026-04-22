@@ -1,0 +1,9 @@
+[
+  { "id": "krome", "name": "Krome", "icon": "🌐", "description": "搜索线索、访问网页" },
+  { "id": "coco", "name": "CoCo", "icon": "💬", "description": "登录他人账号查看历史聊天记录" },
+  { "id": "sql", "name": "99ECoSQL", "icon": "🗄️", "description": "查询人物户籍信息" },
+  { "id": "comail", "name": "CoMail", "icon": "📧", "description": "登录他人账号查看邮件记录" },
+  { "id": "cracker", "name": "PasswordCracker", "icon": "🔐", "description": "破解目标账号密码" },
+  { "id": "sms", "name": "短信", "icon": "✉️", "description": "接收报案、发送真凶信息" },
+  { "id": "memo", "name": "备忘录", "icon": "📝", "description": "记录账号信息和工具提示" }
+]

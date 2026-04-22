@@ -1,0 +1,87 @@
+{
+  "shortcuts": [
+    {
+      "id": "shortcut_001",
+      "name": "mzk forum",
+      "cnName": "mzk城市论坛",
+      "icon": "💬",
+      "url": "https://forum.mzk-city.com",
+      "description": "mzk市本地最大的民生论坛",
+      "hotPosts": [
+        {
+          "isTop": true,
+          "postId": "forum_top_001",
+          "title": "【置顶】最近mzk市的可疑现象汇总",
+          "author": "论坛管理员",
+          "time": "2024-01-28",
+          "content": "整合市民爆料，近期东区/港口区出现可疑人员活动，欢迎补充线索：",
+          "comments": [
+            { "author": "匿名用户", "time": "2024-01-26", "content": "最近总看到鲨鱼mzk半夜在东区废弃工业区附近拖着大箱子。" },
+            { "author": "港口区居民", "time": "2024-01-27", "content": "我看见一个鲨鱼模样的mzk好像很可疑。" },
+            { "author": "匿名用户", "time": "2024-01-28", "content": "我好像看到……侦探mzk了，他好帅，但是看起来很狠辣，我不喜欢他。", "isHidden": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shortcut_002",
+      "name": "TXitter",
+      "cnName": "TXitter 社交平台",
+      "icon": "🐦",
+      "url": "https://txitter.mzk-city.com",
+      "description": "mzk市主流社交平台"
+    }
+  ],
+  "searchResults": {
+    "神山高中": { "relevance": 100, "title": "神山高中新闻网 - 炸弹事件通报", "content": "今日上午神山高中发现可疑包裹，经确认为自制炸弹，已被防爆小组安全处理。无人员伤亡。警方正在调查中。" },
+    "炸弹": { "relevance": 100, "title": "神山高中新闻网 - 炸弹事件通报", "content": "今日上午神山高中发现可疑包裹，经确认为自制炸弹，已被防爆小组安全处理。无人员伤亡。警方正在调查中。" },
+    "炸弹制作材料": { "relevance": 80, "title": "搜索结果", "content": "根据相关法律法规，该搜索结果不予显示。" },
+    "怪核mzk": { "relevance": 95, "title": "mzk城市论坛 - 【置顶】最近mzk市的可疑现象汇总", "jumpToShortcut": "shortcut_001", "jumpToPost": "forum_top_001", "content": "论坛中有市民爆料怪核mzk的可疑行踪，点击查看详情" }
+  },
+  "txitterProfiles": {
+    "侦探mzk": { "nickname": "侦探_大王", "twitterId": "@QLUZERMZK123", "avatar": "https://faceround.cn/games/find-mzk/侦探mzk.png", "bio": "真相只有一个。接受委托中。", "location": "mzk市中央区", "joinDate": "2022年5月", "following": 42, "followers": 128 },
+    "开心mzk": { "nickname": "天天笑嘻嘻", "twitterId": "@HappyMZK_Real", "avatar": "https://faceround.cn/games/find-mzk/开心mzk.png", "bio": "每天都开心！✨", "location": "mzk市西区", "joinDate": "2023年3月", "following": 89, "followers": 230 },
+    "普通mzk": { "nickname": "平平无奇小mzk", "twitterId": "@Normal_MZK", "avatar": "https://faceround.cn/games/find-mzk/普通mzk.png", "bio": "普普通通才是真。", "location": "mzk市北区", "joinDate": "2021年11月", "following": 56, "followers": 34 },
+    "偷听mzk": { "nickname": "耳朵尖尖", "twitterId": "@Eavesdrop_MZK", "avatar": "https://faceround.cn/games/find-mzk/偷听mzk.png", "bio": "嘘——我听到了哦。", "location": "mzk市南区", "joinDate": "2023年8月", "following": 120, "followers": 67 },
+    "怪核mzk": { "nickname": "█怪█核█", "twitterId": "@WeirdCore_MZK", "avatar": "https://faceround.cn/games/find-mzk/怪核mzk.png", "bio": "...", "location": "mzk市东区", "joinDate": "2022年12月", "following": 3, "followers": 7 },
+    "鲨鱼mzk": { "nickname": "深海鲨", "twitterId": "@Shark_MZK", "avatar": "https://faceround.cn/games/find-mzk/鲨鱼mzk.png", "bio": "海洋爱好者🌊 材料收藏家", "location": "mzk市港口区", "joinDate": "2023年1月", "following": 35, "followers": 18 },
+    "倒立mzk": { "nickname": "倒立小能手", "twitterId": "@Handstand_MZK", "avatar": "https://faceround.cn/games/find-mzk/倒立mzk.png", "bio": "换个角度看世界。", "location": "mzk市西区", "joinDate": "2022年9月", "following": 78, "followers": 45 }
+  },
+  "txitterFeeds": {
+    "@QLUZERMZK123": [
+      { "id": "dt1", "time": "2024-01-28T09:00:00", "content": "新案件来了。神山高中的炸弹……有意思。" },
+      { "id": "dt2", "time": "2024-01-27T18:20:00", "content": "有时候最不可能的人反而是真凶。#侦探笔记" },
+      { "id": "dt_hidden", "time": "2024-01-10T00:15:00", "content": "货已出手，案子我接，凶手已定，完美犯罪。", "isPrivate": true }
+    ],
+    "@HappyMZK_Real": [
+      { "id": "ht1", "time": "2024-01-28T14:30:00", "content": "今天要做一件大事...嘿嘿", "comments": 23, "retweets": 5, "likes": 12 },
+      { "id": "ht2", "time": "2024-01-28T10:15:00", "content": "神山高中那边好热闹啊👀", "comments": 8, "retweets": 2, "likes": 6 },
+      { "id": "ht3", "time": "2024-01-27T20:10:00", "content": "朋友送了我一个包，挺沉的，不知道里面装的啥。", "comments": 4, "retweets": 0, "likes": 3 },
+      { "id": "ht4", "time": "2024-01-15T09:00:00", "content": "距离我的14岁生日还有整整4个月！好期待～🎂 到时候要在我家办一个超大的派对！", "comments": 15, "retweets": 3, "likes": 28 }
+    ],
+    "@Normal_MZK": [
+      { "id": "nt1", "time": "2024-01-28T08:00:00", "content": "今天也是普通的一天。" },
+      { "id": "nt2", "time": "2024-01-22T12:00:00", "content": "3月22日就是我的生日了，虽然每年都是普普通通地过，但今年想在平凡路33弄的家里请朋友吃个饭🎂" }
+    ],
+    "@Eavesdrop_MZK": [
+      { "id": "et1", "time": "2024-01-27T23:30:00", "content": "听到了一些不该听的事情……东区废弃仓库那边有动静。" },
+      { "id": "et2", "time": "2024-01-26T22:15:00", "content": "开心mzk好像被什么人盯上了？" },
+      { "id": "et3", "time": "2024-01-20T22:15:00", "content": "有没有游戏分享群推我，加我CoCo 4509821367" }
+    ],
+    "@WeirdCore_MZK": [
+      { "id": "wt1", "time": "2024-01-25T23:59:00", "content": "哈哈哈哈████████" },
+      { "id": "wt2", "time": "2024-01-20T03:14:00", "content": "材料到齐了████" },
+      { "id": "wt3", "time": "2024-01-15T22:00:00", "content": "████████" },
+      { "id": "wt4", "time": "2024-01-10T01:00:00", "content": "需要一个替罪羊。" }
+    ],
+    "@Shark_MZK": [
+      { "id": "st1", "time": "2024-01-26T16:40:00", "content": "新到了一批货，质量不错。" },
+      { "id": "st2", "time": "2024-01-20T12:10:00", "content": "给那家伙的包已经准备好了。" },
+      { "id": "st3", "time": "2024-01-18T09:30:00", "content": "有个大单合作 SharkMZK@CoCo.com，私信不常看。" }
+    ],
+    "@Handstand_MZK": [
+      { "id": "hst1", "time": "2024-01-27T07:30:00", "content": "倒立的时候看到怪核mzk抱着个大箱子往东区走。" },
+      { "id": "hst2", "time": "2024-01-10T07:30:00", "content": "想来我的健身房可以联系邮箱HandstandMZK@CoCo.com" }
+    ]
+  }
+}
