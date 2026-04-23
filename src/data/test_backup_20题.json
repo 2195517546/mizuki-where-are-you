@@ -207,7 +207,7 @@
       "subtitle": "纯真乐天派",
       "description": "永远的快乐喷泉，只要有可爱的衣服和甜点就能原地复活。你的笑容具有治愈魔力，能让周围的人也不自觉地开心起来。即使遇到困难，你也总能找到积极的一面，用乐观的态度感染身边的每一个人。",
       "keywords": ["快乐", "乐观", "治愈"],
-      "image": "https://faceround.cn/games/find-mzk/开心mzk.png",
+      "image": "开心mzk.png",
       "cluster": "活力现充星团",
       "traits": { "social": 2, "energetic": 2, "expressive": 2, "normal": 1 }
     },
@@ -216,7 +216,7 @@
       "subtitle": "安利达人",
       "description": "你的话匣子一旦打开就关不上，特别是在聊起时尚周边的时候。你热衷于分享自己的发现和心得，总能用生动的语言把平凡的事物讲得妙趣横生。朋友们都说和你聊天永远不会冷场，因为你总有说不完的话题和故事。",
       "keywords": ["健谈", "分享", "热情"],
-      "image": "https://faceround.cn/games/find-mzk/讲话mzk.png",
+      "image": "讲话mzk.png",
       "cluster": "活力现充星团",
       "traits": { "social": 2, "share": 2, "direct": 2, "expressive": 2 }
     },
@@ -225,7 +225,7 @@
       "subtitle": "行动派先锋",
       "description": "不喜欢原地踏步，比起思考更愿意先跑起来看看风景。你相信行动胜过千言万语，与其纠结犹豫，不如迈开步伐去探索未知。每一步都是新的冒险，每一次前进都让你感到充实和满足。",
       "keywords": ["行动力", "探索", "前进"],
-      "image": "https://faceround.cn/games/find-mzk/走路mzk.png",
+      "image": "走路mzk.png",
       "cluster": "活力现充星团",
       "traits": { "action": 2, "fast": 2, "energetic": 2 }
     },
@@ -234,7 +234,7 @@
       "subtitle": "极速冲刺者",
       "description": "速度就是一切，慢下来会死星人。你的生活节奏永远是快进模式，做事干脆利落从不拖泥带水。别人还在思考的时候，你已经冲到了终点。高效率是你的代名词，停下来对你来说简直是煎熬。",
       "keywords": ["快速", "冲刺", "活力"],
-      "image": "https://faceround.cn/games/find-mzk/跑mzk.png",
+      "image": "跑mzk.png",
       "cluster": "活力现充星团",
       "traits": { "action": 2, "fast": 2, "energetic": 2 }
     },
@@ -243,7 +243,7 @@
       "subtitle": "Wonderhoy! 感染者",
       "description": "跨越了次元的活力，如果你抽到了这个，说明你今天的精神状态非常哇呼！你拥有能够点燃全场的超强感染力，就像一颗行走的能量炸弹，所到之处都充满欢声笑语。Wonderhoy不仅是口号，更是你的生活态度！",
       "keywords": ["Wonderhoy", "活力", "感染力"],
-      "image": "https://faceround.cn/games/find-mzk/emumzk.png",
+      "image": "emumzk.png",
       "cluster": "活力现充星团",
       "traits": { "social": 2, "energetic": 2, "playful": 2, "expressive": 2 }
     },
@@ -252,7 +252,7 @@
       "subtitle": "气氛组组长",
       "description": "不管场面多冷，你都能用奇怪的律动化解尴尬。你是天生的气氛调节大师，总能在最需要的时候用独特的方式打破僵局。即使是最严肃的场合，你也能找到让大家放松的方法，让欢乐的气氛像呼啦圈一样转动起来。",
       "keywords": ["气氛", "律动", "化解"],
-      "image": "https://faceround.cn/games/find-mzk/呼啦啦mzk.png",
+      "image": "呼啦啦mzk.png",
       "cluster": "活力现充星团",
       "traits": { "social": 2, "playful": 2, "energetic": 2, "weird": 1 }
     },
@@ -261,7 +261,7 @@
       "subtitle": "逻辑逆转者",
       "description": "别人走路，你走钢丝；别人看世界，你颠倒世界。反向思维的神。你总能从完全不同的角度看待问题，当所有人都习惯性地按常规思考时，你已经倒立着找到了另一条路。这种独特的视角让你成为团队中不可或缺的创意源泉。",
       "keywords": ["逆向", "颠倒", "独特"],
-      "image": "https://faceround.cn/games/find-mzk/倒立mzk.png",
+      "image": "倒立mzk.png",
       "cluster": "物理掉线星团",
       "traits": { "break": 2, "weird": 2, "think": 2, "alone": 1 }
     },
@@ -270,7 +270,7 @@
       "subtitle": "反重力行者",
       "description": "不仅要颠倒，还要边颠倒边前进。你是那种不走寻常路还要走得比别人快的人。在你看来，挑战越大越有意思，困难模式才是正确的打开方式。你用实际行动证明，即使用最不可思议的方式，也能到达目的地。",
       "keywords": ["反重力", "前进", "坚持"],
-      "image": "https://faceround.cn/games/find-mzk/倒立走mzk.png",
+      "image": "倒立走mzk.png",
       "cluster": "物理掉线星团",
       "traits": { "break": 2, "weird": 2, "action": 2, "fast": 1 }
     },
@@ -279,7 +279,7 @@
       "subtitle": "偏离航线者",
       "description": "总是能在寻常的生活中找到那个侧向的切入点。你不喜欢正面硬刚，更擅长从意想不到的角度切入问题。这种独特的思维方式让你总能发现别人忽略的细节，找到更巧妙的解决方案。",
       "keywords": ["侧向", "偏离", "切入"],
-      "image": "https://faceround.cn/games/find-mzk/右立mzk.png",
+      "image": "右立mzk.png",
       "cluster": "物理掉线星团",
       "traits": { "break": 2, "weird": 2, "think": 1, "alone": 1 }
     },
@@ -288,7 +288,7 @@
       "subtitle": "自由梦想家",
       "description": "脚踏实地太累了，你只想在赛博空间里自由滑翔。你向往不受束缚的生活，渴望突破一切限制。在你的世界里，重力只是个建议，规则只是参考，自由才是唯一的追求。你用想象力为自己插上翅膀，在思维的天空中自由翱翔。",
       "keywords": ["自由", "飞翔", "梦想"],
-      "image": "https://faceround.cn/games/find-mzk/飞行mzk.png",
+      "image": "飞行mzk.png",
       "cluster": "物理掉线星团",
       "traits": { "break": 2, "weird": 2, "fast": 1, "alone": 1 }
     },
@@ -297,7 +297,7 @@
       "subtitle": "情报局局长",
       "description": "不小心路过，不小心听见，不小心就掌握了你的所有把柄。你拥有敏锐的观察力和超强的信息收集能力，总能在不经意间获取到关键情报。不是八卦，只是对周围环境保持高度的敏感性。你是团队里最了解情况的人。",
       "keywords": ["情报", "观察", "隐秘"],
-      "image": "https://faceround.cn/games/find-mzk/偷听mzk.png",
+      "image": "偷听mzk.png",
       "cluster": "混沌恶作剧星团",
       "traits": { "lurk": 2, "reserved": 2, "playful": 2, "alone": 1 }
     },
@@ -306,7 +306,7 @@
       "subtitle": "调皮小恶魔",
       "description": "挑衅只是为了看你脸红，是那种让人恨不起来的捣蛋鬼。你的调皮总是恰到好处，既能活跃气氛又不会真的惹人生气。你深谙玩笑的分寸，知道如何用可爱的方式表达自己的小叛逆。大家都知道你是在开玩笑，所以反而更喜欢你。",
       "keywords": ["调皮", "挑衅", "可爱"],
-      "image": "https://faceround.cn/games/find-mzk/吐舌mzk.png",
+      "image": "吐舌mzk.png",
       "cluster": "混沌恶作剧星团",
       "traits": { "playful": 2, "indirect": 2, "expressive": 1, "social": 1 }
     },
@@ -315,7 +315,7 @@
       "subtitle": "戏精本体",
       "description": "擅长制造突发状况，虽然有时候会被自己吓到。你的反应总是比别人夸张十倍，把生活过成了一场连续剧。每一个小惊喜都能让你演绎出大片的效果，你的戏剧化表达方式让平淡的日常变得生动有趣。",
       "keywords": ["戏精", "突发", "夸张"],
-      "image": "https://faceround.cn/games/find-mzk/惊吓mzk.png",
+      "image": "惊吓mzk.png",
       "cluster": "混沌恶作剧星团",
       "traits": { "expressive": 2, "playful": 2, "action": 2, "social": 1 }
     },
@@ -324,7 +324,7 @@
       "subtitle": "赛博掠食者",
       "description": "可爱的外表下藏着尖牙，攻击性（指吐槽能力）极强。你的吐槽精准又犀利，总能一针见血地指出问题所在。虽然话语锋利，但大家都知道你是对事不对人。你的毒舌背后其实藏着对朋友的关心，只是表达方式比较特别。",
       "keywords": ["尖锐", "吐槽", "攻击性"],
-      "image": "https://faceround.cn/games/find-mzk/鲨鱼mzk.png",
+      "image": "鲨鱼mzk.png",
       "cluster": "混沌恶作剧星团",
       "traits": { "direct": 2, "playful": 2, "expressive": 1, "break": 1 }
     },
@@ -333,7 +333,7 @@
       "subtitle": "囤积狂魔",
       "description": "收集癖晚期患者，看到喜欢的东西就想藏起来。像松鼠一样把宝贝都藏好，但经常忘记藏在哪里。你的收藏夹、购物车、书签栏都塞得满满当当，每一样东西都承载着你的小心思。虽然有时会忘记自己收藏了什么，但翻出来的时候总能收获意外的惊喜。",
       "keywords": ["收集", "囤积", "可爱"],
-      "image": "https://faceround.cn/games/find-mzk/松鼠mzk.png",
+      "image": "松鼠mzk.png",
       "cluster": "混沌恶作剧星团",
       "traits": { "alone": 2, "reserved": 2, "playful": 1, "calm": 1 }
     },
@@ -342,7 +342,7 @@
       "subtitle": "真实之眼",
       "description": "一直在注视，从未被理解。你是那个能一眼看穿虚伪的人。你拥有超乎寻常的洞察力，能够看到事物表象之下的真相。虽然这种能力让你显得有些孤独，但你依然保持着对世界的好奇和观察。你的眼睛里藏着深邃的思考和对真实的执着追求。",
       "keywords": ["注视", "洞察", "真实"],
-      "image": "https://faceround.cn/games/find-mzk/大眼mzk.png",
+      "image": "大眼mzk.png",
       "cluster": "抽象深渊星团",
       "traits": { "alone": 2, "think": 2, "weird": 2, "reserved": 2 }
     },
@@ -351,7 +351,7 @@
       "subtitle": "超现实主义者",
       "description": "你的存在本身就是一种艺术，不需要逻辑，只需要感觉。你活在自己构建的超现实世界里，用独特的审美和思维方式诠释着生活。别人觉得奇怪的东西，在你眼里都是艺术品。你不追求被理解，因为你知道真正的艺术本就超越常规。",
       "keywords": ["怪核", "超现实", "艺术"],
-      "image": "https://faceround.cn/games/find-mzk/怪核mzk.png",
+      "image": "怪核mzk.png",
       "cluster": "抽象深渊星团",
       "traits": { "weird": 2, "break": 2, "alone": 2, "think": 1 }
     },
@@ -360,7 +360,7 @@
       "subtitle": "禅修瑞希",
       "description": "在喧闹的世界中心原地飞升，内心毫无波动甚至有点想吃拉面。你已经达到了某种禅的境界，外界的纷扰完全无法影响你的内心平静。你用一种超然的态度面对生活，不急不躁，不争不抢。在你看来，保持内心的平和比什么都重要。",
       "keywords": ["禅修", "平静", "佛系"],
-      "image": "https://faceround.cn/games/find-mzk/打坐mzk.png",
+      "image": "打坐mzk.png",
       "cluster": "抽象深渊星团",
       "traits": { "calm": 2, "alone": 2, "slow": 2, "reserved": 2 }
     },
@@ -369,7 +369,7 @@
       "subtitle": "不可名状者",
       "description": "通通！通通！一种魔性的重复，你是那种能让人产生精神污染（褒义）的存在。你的表达方式独特到让人过目难忘，简单的重复在你这里变成了一种艺术。你用最简单的方式传递最强烈的情感，让人一听就忘不掉。这种魔性的感染力是你独有的魅力。",
       "keywords": ["魔性", "重复", "精神污染"],
-      "image": "https://faceround.cn/games/find-mzk/通通mzk.png",
+      "image": "通通mzk.png",
       "cluster": "抽象深渊星团",
       "traits": { "weird": 2, "break": 2, "indirect": 2, "playful": 1 }
     },
@@ -378,7 +378,7 @@
       "subtitle": "平和观测者",
       "description": "虽然看起来很普通，但其实是在默默守护大家。你是那种不张扬但可靠的存在，总在关键时刻给予支持。你的平和不是平庸，而是一种成熟的智慧。你懂得在喧嚣中保持自我，用温柔的方式守护着身边的人。",
       "keywords": ["平和", "守护", "温柔"],
-      "image": "https://faceround.cn/games/find-mzk/普通mzk.png",
+      "image": "普通mzk.png",
       "cluster": "情绪基准星团",
       "traits": { "normal": 2, "calm": 2, "reserved": 1, "follow": 1 }
     },
@@ -387,7 +387,7 @@
       "subtitle": "正义的小炮仗",
       "description": "非常有原则，被踩到红线时会像气球一样瞬间炸裂。你对正义和公平有着强烈的执着，看不惯不公平的事情。虽然平时温和，但在原则问题上绝不妥协。你的愤怒来得快去得也快，因为你只是想让世界变得更好一点。",
       "keywords": ["原则", "正义", "爆发"],
-      "image": "https://faceround.cn/games/find-mzk/生气mzk.png",
+      "image": "生气mzk.png",
       "cluster": "情绪基准星团",
       "traits": { "direct": 2, "expressive": 2, "action": 2, "normal": 1 }
     }

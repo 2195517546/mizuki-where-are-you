@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "普通mzk",
-    "avatar": "https://faceround.cn/games/find-mzk/普通mzk.png",
+    "avatar": "普通mzk.png",
     "greeting": "嗯？只是想找我聊天吗？那……你觉得我今天这身打扮，是‘普通’的吗？还是说，在你眼里我显得很‘异常’呢？",
     "answers": [
       "瑞希就是瑞希",
@@ -38,7 +38,7 @@
   {
     "id": 2,
     "name": "怪核mzk",
-    "avatar": "https://faceround.cn/games/find-mzk/怪核mzk.png",
+    "avatar": "怪核mzk.png",
     "greeting": "……你看，这个世界是不是有很多裂缝？我就站在裂缝里。对我这种‘异类’来说，这里比光照下的教室要舒服得多。你……也感觉到了那种强烈的违和感吗？",
     "answers": [
       "违和感",
@@ -74,7 +74,7 @@
   {
     "id": 3,
     "name": "emumzk",
-    "avatar": "https://faceround.cn/games/find-mzk/emumzk.png",
+    "avatar": "emumzk.png",
     "greeting": "哇！！大家都要WONDERHOI——☆！诶呀，这种充满元气的打招呼方式是不是超棒？快，你也跟我一起笑一个！只要笑得够大声，那些‘不可说的事情’就全都会飞走啦！",
     "answers": [
       "别勉强自己",
@@ -110,7 +110,7 @@
   {
     "id": 4,
     "name": "倒立mzk",
-    "avatar": "https://faceround.cn/games/find-mzk/倒立mzk.png",
+    "avatar": "倒立mzk.png",
     "greeting": "啊……世界颠倒过来了。在这种状态下，原本那些讨厌的‘规则’和‘视线’是不是也全都掉进天空里去了？只要把头朝下，眼泪就不会流出来，这招很管用哦。你要不要也试试看？",
     "answers": [
       "换个角度看世界",
@@ -138,7 +138,7 @@
   {
     "id": 5,
     "name": "鲨鱼mzk",
-    "avatar": "https://faceround.cn/games/find-mzk/鲨鱼mzk.png",
+    "avatar": "鲨鱼mzk.png",
     "greeting": "特拉啦了咯塔拉拉～☆ 你现在是被我‘通通’的状态哦！如果不小心说错话，我可是会咬你的～……开玩笑的。我虽然是鲨鱼样子，但是那些真正想咬人的冲动就会被当成‘可爱’的玩笑。很便利吧？",
     "answers": [
       "可爱即正义",
@@ -165,7 +165,7 @@
   {
     "id": 6,
     "name": "打坐mzk",
-    "avatar": "https://faceround.cn/games/find-mzk/打坐mzk.png",
+    "avatar": "打坐mzk.png",
     "greeting": "……嘘。我在试着和内心深处的那个‘东西’对话。虽然大部分时间听到的都是噪音，但如果不这样做，我怕我会被那些声音吞没。你也想一起吗？安静地坐着，什么都不想。",
     "answers": [
       "静心",
@@ -191,7 +191,7 @@
   {
     "id": 7,
     "name": "惊吓mzk",
-    "avatar": "https://faceround.cn/games/find-mzk/惊吓mzk.png",
+    "avatar": "惊吓mzk.png",
     "greeting": "呀啊！！吓、吓到你了？……不，真正被吓到的人是我啊。为什么……为什么你要用那种眼神看着我？你发现了吗？发现我其实是个‘怪物’这件事？别、别过来……！",
     "answers": [
       "别害怕",
@@ -219,7 +219,7 @@
   {
     "id": 8,
     "name": "偷听mzk",
-    "avatar": "https://faceround.cn/games/find-mzk/偷听mzk.png",
+    "avatar": "偷听mzk.png",
     "greeting": "……嘘。别出声，会被发现的。我正在收集关于‘我自己’的流言。你知道吗，从别人嘴里听到的‘晓山瑞希’，有时候连我自己都觉得陌生。你是来加入我的窃听行动，还是来揭发我的？",
     "answers": [
       "我站在你这边",
@@ -249,7 +249,7 @@
   {
     "id": 9,
     "name": "吐舌mzk",
-    "avatar": "https://faceround.cn/games/find-mzk/吐舌mzk.png",
+    "avatar": "吐舌mzk.png",
     "greeting": "略略略～！看到这个表情，是不是觉得我特别欠揍？还是觉得我很‘可爱’？不管哪种都行，只要你能忽略掉那些‘不对劲’的地方就好。反正只要把舌头伸出来，话题就可以被我含糊地带过去了～",
     "answers": [
       "调皮鬼",
@@ -277,7 +277,7 @@
   {
     "id": 10,
     "name": "生气mzk",
-    "avatar": "https://faceround.cn/games/find-mzk/生气mzk.png",
+    "avatar": "生气mzk.png",
     "greeting": "……看什么看？没看过别人生气吗？还是说，你觉得我这个样子很‘稀奇’？对，我就是生气了。不是因为谁惹了我，而是因为这个必须永远笑着的世界。你也觉得我该像平时一样嘻嘻哈哈的吗？凭什么。",
     "answers": [
       "生气也很可爱",

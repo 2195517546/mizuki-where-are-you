@@ -23,10 +23,10 @@ function acceptDisclaimer() {
 // ─── 全关通关结算画面 ───
 const showEndScreen = ref(false)
 const BG_SLIDES = [
-  { src: 'https://faceround.cn/games/find-mzk/调查04.jpg', flash: 'https://faceround.cn/games/find-mzk/调查4.jpg' },
-  { src: 'https://faceround.cn/games/find-mzk/调查05.jpg', flash: null },
-  { src: 'https://faceround.cn/games/find-mzk/调查06.jpg', flash: null },
-  { src: 'https://faceround.cn/games/find-mzk/调查03.jpg', flash: null },
+  { src: '调查04.jpg', flash: '调查4.jpg' },
+  { src: '调查05.jpg', flash: null },
+  { src: '调查06.jpg', flash: null },
+  { src: '调查03.jpg', flash: null },
 ]
 const currentSlide = ref(0)
 const slideOpacity = ref(1)
@@ -108,7 +108,7 @@ function clearSave() {
   <div class="home" :class="{ weird: weirdMode }">
     <img
       class="mzk-img"
-      :src="weirdMode ? 'https://faceround.cn/games/find-mzk/%E6%80%AA%E6%A0%B8mzk.png' : 'https://faceround.cn/games/find-mzk/%E5%A4%A7%E7%9C%BCmzk.png'"
+      :src="weirdMode ? '%E6%80%AA%E6%A0%B8mzk.png' : '%E5%A4%A7%E7%9C%BCmzk.png'"
       :alt="weirdMode ? '怪核mzk' : '大眼mzk'"
       fetchpriority="high"
     />

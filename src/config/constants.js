@@ -1,7 +1,7 @@
 // 游戏全局配置
 export const CONFIG = {
-  // CDN基础路径
-  CDN_BASE: 'https://faceround.cn/games/find-mzk/',
+  // CDN基础路径（改为本地路径）
+  CDN_BASE: '/',
 
   // 游戏版本
   VERSION: '1.0.0',

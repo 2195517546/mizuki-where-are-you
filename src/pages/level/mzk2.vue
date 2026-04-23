@@ -10,7 +10,7 @@ const router = useRouter()
 const store = useGameStore()
 const found = ref(false)
 
-const BASE = 'https://faceround.cn/games/find-mzk/'
+const BASE = ''
 const TARGET = '生气mzk'
 const FILLERS = [
   '倒立mzk', '倒立走mzk', '偷听mzk', '右立mzk', '吐舌mzk',

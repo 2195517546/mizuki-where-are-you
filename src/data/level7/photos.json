@@ -1,5 +1,5 @@
 {
-  "cdnBase": "https://faceround.cn/games/find-mzk/",
+  "cdnBase": "",
   "daily": [
     { "name": "IMG_0504.jpg", "url": "调查04.jpg", "type": "daily", "meta": "2025-05-04 / 街道" },
     { "name": "IMG_0503.jpg", "url": "调查03.jpg", "type": "daily", "meta": "2025-05-03 / 秋千" },

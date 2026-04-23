@@ -20,7 +20,7 @@ defineEmits(['home'])
 <template>
   <header class="top-bar">
     <button class="home-link" @click="$emit('home')">
-      <img class="home-link-icon" src="https://faceround.cn/games/find-mzk/%E5%A4%A7%E7%9C%BCmzk.png" alt="首页" />
+      <img class="home-link-icon" src="/大眼mzk.png" alt="首页" />
       <span class="home-link-text">首页</span>
     </button>
     <div class="hint">

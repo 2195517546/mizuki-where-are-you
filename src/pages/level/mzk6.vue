@@ -12,7 +12,7 @@ import ResultModal from '../../components/game/ResultModal.vue'
 const router = useRouter()
 const store = useGameStore()
 
-const BASE = 'https://faceround.cn/games/find-mzk/'
+const BASE = ''
 const COVER_BASE = import.meta.env.BASE_URL + 'vediocover/'
 
 // ─── 用户 & mzk 角色 ───
@@ -357,7 +357,7 @@ function goHome() {
         <div class="bili-msg-wrap" @click="openMessages">
           <img
             class="bili-msg-icon"
-            src="https://faceround.cn/games/find-mzk/icons/%E7%A7%81%E4%BF%A1.svg"
+            src="icons/%E7%A7%81%E4%BF%A1.svg"
             alt="私信"
           />
           <span class="bili-msg-badge">10</span>
@@ -398,11 +398,11 @@ function goHome() {
             </div>
             <div class="cover-info">
               <span class="cover-stat">
-                <img class="stat-icon" src="https://faceround.cn/games/find-mzk/icons/%E6%92%AD%E6%94%BE%E9%87%8F.svg" alt="" />
+                <img class="stat-icon" src="icons/%E6%92%AD%E6%94%BE%E9%87%8F.svg" alt="" />
                 {{ v.playCount }}
               </span>
               <span class="cover-stat">
-                <img class="stat-icon" src="https://faceround.cn/games/find-mzk/icons/%E6%92%AD%E6%94%BE%E9%87%8F.svg" alt="" />
+                <img class="stat-icon" src="icons/%E6%92%AD%E6%94%BE%E9%87%8F.svg" alt="" />
                 {{ v.danmakuCount }}
               </span>
               <span class="cover-time">{{ v.time }}</span>
@@ -413,7 +413,7 @@ function goHome() {
           <!-- UP 信息 -->
           <div class="video-up-row">
             <template v-if="v.upDisplay.type === 'up'">
-              <img class="up-icon" src="https://faceround.cn/games/find-mzk/icons/UP%E4%B8%BB.svg" alt="UP" />
+              <img class="up-icon" src="icons/UP%E4%B8%BB.svg" alt="UP" />
               <span class="up-name">{{ v.upDisplay.name }}</span>
             </template>
             <template v-else-if="v.upDisplay.type === 'tag'">
@@ -421,10 +421,10 @@ function goHome() {
               <span v-if="v.upDisplay.name" class="up-name">{{ v.upDisplay.name }}</span>
             </template>
             <template v-else>
-              <img class="followed-icon" src="https://faceround.cn/games/find-mzk/icons/%E5%B7%B2%E5%85%B3%E6%B3%A8.svg" alt="" />
+              <img class="followed-icon" src="icons/%E5%B7%B2%E5%85%B3%E6%B3%A8.svg" alt="" />
               <span class="up-name followed">已关注 {{ v.upDisplay.name }}</span>
             </template>
-            <img class="more-icon" src="https://faceround.cn/games/find-mzk/icons/%E6%9B%B4%E5%A4%9A.svg" alt="更多" @click.stop="blocked()" />
+            <img class="more-icon" src="icons/%E6%9B%B4%E5%A4%9A.svg" alt="更多" @click.stop="blocked()" />
           </div>
         </div>
       </div>
@@ -437,22 +437,22 @@ function goHome() {
       <!-- 底部 Tabbar -->
       <nav class="bili-bottom">
         <div class="bottom-item active" @click="clickBottomTab('首页')">
-          <img class="bottom-icon" src="https://faceround.cn/games/find-mzk/icons/%E9%A6%96%E9%A1%B5.svg" alt="" />
+          <img class="bottom-icon" src="icons/%E9%A6%96%E9%A1%B5.svg" alt="" />
           <span>首页</span>
         </div>
         <div class="bottom-item" @click="clickBottomTab('关注')">
-          <img class="bottom-icon" src="https://faceround.cn/games/find-mzk/icons/%E5%85%B3%E6%B3%A8.svg" alt="" />
+          <img class="bottom-icon" src="icons/%E5%85%B3%E6%B3%A8.svg" alt="" />
           <span>关注</span>
         </div>
         <div class="bottom-item center" @click="clickBottomTab('发布')">
           <img class="bottom-center-icon" :src="`${BASE}生气mzk.png`" alt="mzk" />
         </div>
         <div class="bottom-item" @click="clickBottomTab('会员购')">
-          <img class="bottom-icon" src="https://faceround.cn/games/find-mzk/icons/%E4%BC%9A%E5%91%98%E8%B4%AD.svg" alt="" />
+          <img class="bottom-icon" src="icons/%E4%BC%9A%E5%91%98%E8%B4%AD.svg" alt="" />
           <span>会员购</span>
         </div>
         <div class="bottom-item" @click="clickBottomTab('我的')">
-          <img class="bottom-icon" src="https://faceround.cn/games/find-mzk/icons/%E6%88%91%E7%9A%84.svg" alt="" />
+          <img class="bottom-icon" src="icons/%E6%88%91%E7%9A%84.svg" alt="" />
           <span>我的</span>
         </div>
       </nav>
@@ -465,7 +465,7 @@ function goHome() {
 
         <video
           class="video-element"
-          src="https://faceround.cn/games/find-mzk/压缩67晓山瑞希视频.mp4"
+          src="压缩67晓山瑞希视频.mp4"
           controls
           playsinline
         ></video>
