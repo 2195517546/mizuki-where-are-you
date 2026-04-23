@@ -13,10 +13,10 @@ const showContinue = ref(route.query.from === 'index')
 
 // ─── 结算背景轮播 ───
 const BG_SLIDES = [
-  { src: 'https://faceround.cn/games/find-mzk/调查04.jpg', flash: 'https://faceround.cn/games/find-mzk/调查4.jpg' },
-  { src: 'https://faceround.cn/games/find-mzk/调查05.jpg', flash: null },
-  { src: 'https://faceround.cn/games/find-mzk/调查06.jpg', flash: null },
-  { src: 'https://faceround.cn/games/find-mzk/调查03.jpg', flash: null },
+  { src: '调查04.jpg', flash: '调查4.jpg' },
+  { src: '调查05.jpg', flash: null },
+  { src: '调查06.jpg', flash: null },
+  { src: '调查03.jpg', flash: null },
 ]
 const currentSlide = ref(0)
 const slideOpacity = ref(1)

@@ -462,7 +462,7 @@
         "乐观",
         "治愈"
       ],
-      "image": "https://faceround.cn/games/find-mzk/开心mzk.png",
+      "image": "开心mzk.png",
       "cluster": "活力现充星团",
       "traits": {
         "social": 2,
@@ -480,7 +480,7 @@
         "分享",
         "热情"
       ],
-      "image": "https://faceround.cn/games/find-mzk/讲话mzk.png",
+      "image": "讲话mzk.png",
       "cluster": "活力现充星团",
       "traits": {
         "social": 2,
@@ -498,7 +498,7 @@
         "探索",
         "前进"
       ],
-      "image": "https://faceround.cn/games/find-mzk/走路mzk.png",
+      "image": "走路mzk.png",
       "cluster": "活力现充星团",
       "traits": {
         "action": 2,
@@ -516,7 +516,7 @@
         "冲刺",
         "活力"
       ],
-      "image": "https://faceround.cn/games/find-mzk/跑mzk.png",
+      "image": "跑mzk.png",
       "cluster": "活力现充星团",
       "traits": {
         "action": 2,
@@ -533,7 +533,7 @@
         "活力",
         "感染力"
       ],
-      "image": "https://faceround.cn/games/find-mzk/emumzk.png",
+      "image": "emumzk.png",
       "cluster": "活力现充星团",
       "traits": {
         "social": 2,
@@ -551,7 +551,7 @@
         "律动",
         "化解"
       ],
-      "image": "https://faceround.cn/games/find-mzk/呼啦啦mzk.png",
+      "image": "呼啦啦mzk.png",
       "cluster": "活力现充星团",
       "traits": {
         "social": 2,
@@ -569,7 +569,7 @@
         "颠倒",
         "独特"
       ],
-      "image": "https://faceround.cn/games/find-mzk/倒立mzk.png",
+      "image": "倒立mzk.png",
       "cluster": "物理掉线星团",
       "traits": {
         "break": 2,
@@ -587,7 +587,7 @@
         "前进",
         "坚持"
       ],
-      "image": "https://faceround.cn/games/find-mzk/倒立走mzk.png",
+      "image": "倒立走mzk.png",
       "cluster": "物理掉线星团",
       "traits": {
         "break": 2,
@@ -605,7 +605,7 @@
         "偏离",
         "切入"
       ],
-      "image": "https://faceround.cn/games/find-mzk/右立mzk.png",
+      "image": "右立mzk.png",
       "cluster": "物理掉线星团",
       "traits": {
         "break": 1,
@@ -623,7 +623,7 @@
         "飞翔",
         "梦想"
       ],
-      "image": "https://faceround.cn/games/find-mzk/飞行mzk.png",
+      "image": "飞行mzk.png",
       "cluster": "物理掉线星团",
       "traits": {
         "break": 2,
@@ -641,7 +641,7 @@
         "观察",
         "隐秘"
       ],
-      "image": "https://faceround.cn/games/find-mzk/偷听mzk.png",
+      "image": "偷听mzk.png",
       "cluster": "混沌恶作剧星团",
       "traits": {
         "lurk": 1,
@@ -659,7 +659,7 @@
         "挑衅",
         "可爱"
       ],
-      "image": "https://faceround.cn/games/find-mzk/吐舌mzk.png",
+      "image": "吐舌mzk.png",
       "cluster": "混沌恶作剧星团",
       "traits": {
         "playful": 2,
@@ -677,7 +677,7 @@
         "突发",
         "夸张"
       ],
-      "image": "https://faceround.cn/games/find-mzk/惊吓mzk.png",
+      "image": "惊吓mzk.png",
       "cluster": "混沌恶作剧星团",
       "traits": {
         "expressive": 2,
@@ -695,7 +695,7 @@
         "吐槽",
         "攻击性"
       ],
-      "image": "https://faceround.cn/games/find-mzk/鲨鱼mzk.png",
+      "image": "鲨鱼mzk.png",
       "cluster": "混沌恶作剧星团",
       "traits": {
         "direct": 2,
@@ -713,7 +713,7 @@
         "囤积",
         "可爱"
       ],
-      "image": "https://faceround.cn/games/find-mzk/松鼠mzk.png",
+      "image": "松鼠mzk.png",
       "cluster": "混沌恶作剧星团",
       "traits": {
         "alone": 2,
@@ -731,7 +731,7 @@
         "洞察",
         "真实"
       ],
-      "image": "https://faceround.cn/games/find-mzk/大眼mzk.png",
+      "image": "大眼mzk.png",
       "cluster": "抽象深渊星团",
       "traits": {
         "alone": 2,
@@ -749,7 +749,7 @@
         "超现实",
         "艺术"
       ],
-      "image": "https://faceround.cn/games/find-mzk/怪核mzk.png",
+      "image": "怪核mzk.png",
       "cluster": "抽象深渊星团",
       "traits": {
         "weird": 2,
@@ -767,7 +767,7 @@
         "平静",
         "佛系"
       ],
-      "image": "https://faceround.cn/games/find-mzk/打坐mzk.png",
+      "image": "打坐mzk.png",
       "cluster": "抽象深渊星团",
       "traits": {
         "calm": 2,
@@ -785,7 +785,7 @@
         "重复",
         "精神污染"
       ],
-      "image": "https://faceround.cn/games/find-mzk/通通mzk.png",
+      "image": "通通mzk.png",
       "cluster": "抽象深渊星团",
       "traits": {
         "weird": 2,
@@ -803,7 +803,7 @@
         "守护",
         "温柔"
       ],
-      "image": "https://faceround.cn/games/find-mzk/普通mzk.png",
+      "image": "普通mzk.png",
       "cluster": "情绪基准星团",
       "traits": {
         "normal": 2,
@@ -821,7 +821,7 @@
         "正义",
         "爆发"
       ],
-      "image": "https://faceround.cn/games/find-mzk/生气mzk.png",
+      "image": "生气mzk.png",
       "cluster": "情绪基准星团",
       "traits": {
         "direct": 2,
@@ -839,7 +839,7 @@
         "自律",
         "活力"
       ],
-      "image": "https://faceround.cn/games/find-mzk/肌肉mzk.jpg",
+      "image": "肌肉mzk.jpg",
       "cluster": "社交活力星团",
       "traits": {
         "action": 2,

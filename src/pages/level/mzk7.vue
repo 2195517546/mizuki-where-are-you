@@ -20,7 +20,7 @@ import TopBar from '../../components/game/TopBar.vue'
 
 const router = useRouter()
 const store = useGameStore()
-const BASE = 'https://faceround.cn/games/find-mzk/'
+const BASE = ''
 
 // ─── 双重解锁门 ───
 const UNLOCK_KEY = 'mzk-level7-unlocked'
@@ -885,7 +885,7 @@ function goHome() {
           <input v-model="browserAddress" class="browser-addr" placeholder="输入地址…" @keyup.enter="goAddress" />
           <button v-if="browserCurrentPage" class="browser-bar-btn" @click="refreshTab">⟳</button>
           <button v-if="browserCurrentPage" class="browser-bar-btn browser-home-btn" @click="browserGoHome">
-            <img src="https://faceround.cn/games/find-mzk/icons/%E9%A6%96%E9%A1%B5.svg" alt="首页" />
+            <img src="icons/%E9%A6%96%E9%A1%B5.svg" alt="首页" />
           </button>
         </div>
         <!-- 页面内容 -->

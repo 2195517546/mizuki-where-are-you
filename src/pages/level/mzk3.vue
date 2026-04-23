@@ -9,7 +9,7 @@ import ResultModal from '../../components/game/ResultModal.vue'
 const router = useRouter()
 const store = useGameStore()
 
-const BASE = 'https://faceround.cn/games/find-mzk/'
+const BASE = ''
 const MZK_TYPES = [
   '倒立mzk', '倒立走mzk', '偷听mzk', '右立mzk', '吐舌mzk',
   '呼啦啦mzk', '大眼mzk', '开心mzk', '怪核mzk', '惊吓mzk',

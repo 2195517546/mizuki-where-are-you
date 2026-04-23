@@ -8,7 +8,7 @@
         <a href="https://space.bilibili.com/3493077794687210" target="_blank" rel="noopener">by 尤珞理希</a>
         <span class="sep">｜</span>
         <img
-          src="https://faceround.cn/games/find-mzk/%E5%85%AC%E5%AE%89.png"
+          src="/公安.png"
           alt="公安备案"
           class="beian-icon"
         />

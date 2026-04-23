@@ -11,7 +11,7 @@ const router = useRouter()
 const store = useGameStore()
 const won = ref(false)
 
-const BASE = 'https://faceround.cn/games/find-mzk/'
+const BASE = ''
 
 // 搜索相关
 const searchQuery = ref('')

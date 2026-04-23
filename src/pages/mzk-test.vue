@@ -4,7 +4,7 @@
     <div v-if="currentScreen === 'intro'" class="screen intro-screen">
       <img
         class="mzk-img"
-        src="https://faceround.cn/games/find-mzk/普通mzk.png"
+        src="/普通mzk.png"
         alt="普通mzk"
         fetchpriority="high"
       />

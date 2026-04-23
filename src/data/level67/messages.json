@@ -13,7 +13,7 @@
       "unread": 3,
       "messages": [
         { "from": "other", "content": "喂！你能看到这条消息吗", "time": "13:01" },
-        { "from": "other", "content": "我在这里！但是好像哪里不对……", "mzkImage": "https://faceround.cn/games/find-mzk/惊吓mzk.png", "time": "13:02" },
+        { "from": "other", "content": "我在这里！但是好像哪里不对……", "mzkImage": "惊吓mzk.png", "time": "13:02" },
         { "from": "other", "content": "你去找找那个坏掉的视频，我把线索藏在里面了", "time": "13:03" }
       ],
       "replies": {
@@ -62,7 +62,7 @@
       "time": "10分钟前",
       "unread": 1,
       "messages": [
-        { "from": "other", "content": "嘿嘿，我躲起来了，你来找我呀～", "mzkImage": "https://faceround.cn/games/find-mzk/开心mzk.png", "time": "12:51" }
+        { "from": "other", "content": "嘿嘿，我躲起来了，你来找我呀～", "mzkImage": "开心mzk.png", "time": "12:51" }
       ],
       "replies": {
         "你好": "嘿嘿～你终于来啦！我等你好久了！",
@@ -108,7 +108,7 @@
       "unread": 0,
       "messages": [
         { "from": "other", "content": "小声说……", "time": "12:31" },
-        { "from": "other", "content": "我听到了一些奇怪的声音", "mzkImage": "https://faceround.cn/games/find-mzk/偷听mzk.png", "time": "12:31" },
+        { "from": "other", "content": "我听到了一些奇怪的声音", "mzkImage": "偷听mzk.png", "time": "12:31" },
         { "from": "other", "content": "好像有人在找我们？", "time": "12:32" }
       ],
       "replies": {
@@ -156,7 +156,7 @@
       "time": "1小时前",
       "unread": 2,
       "messages": [
-        { "from": "other", "content": "你怎么现在才来找我！！", "mzkImage": "https://faceround.cn/games/find-mzk/生气mzk.png", "time": "12:01" },
+        { "from": "other", "content": "你怎么现在才来找我！！", "mzkImage": "生气mzk.png", "time": "12:01" },
         { "from": "other", "content": "快去看那个封面损坏的视频！线索在里面！", "time": "12:02" }
       ],
       "replies": {
@@ -204,7 +204,7 @@
       "time": "2小时前",
       "unread": 0,
       "messages": [
-        { "from": "other", "content": "我从很高的地方看到你了～", "mzkImage": "https://faceround.cn/games/find-mzk/飞行mzk.png", "time": "11:03" },
+        { "from": "other", "content": "我从很高的地方看到你了～", "mzkImage": "飞行mzk.png", "time": "11:03" },
         { "from": "other", "content": "视频里有答案，加油找吧！", "time": "11:04" }
       ],
       "replies": {
@@ -251,7 +251,7 @@
       "time": "昨天",
       "unread": 0,
       "messages": [
-        { "from": "other", "content": "通通，通通～", "mzkImage": "https://faceround.cn/games/find-mzk/通通mzk.png", "time": "昨天 20:15" },
+        { "from": "other", "content": "通通，通通～", "mzkImage": "通通mzk.png", "time": "昨天 20:15" },
         { "from": "other", "content": "有人在吗？我们迷路了！", "time": "昨天 20:16" }
       ],
       "replies": {
@@ -298,7 +298,7 @@
       "time": "昨天",
       "unread": 0,
       "messages": [
-        { "from": "other", "content": "有重要的事情要告诉你……", "mzkImage": "https://faceround.cn/games/find-mzk/讲话mzk.png", "time": "昨天 15:44" },
+        { "from": "other", "content": "有重要的事情要告诉你……", "mzkImage": "讲话mzk.png", "time": "昨天 15:44" },
         { "from": "other", "content": "那个封面破损的视频，是我们留下的！", "time": "昨天 15:45" },
         { "from": "other", "content": "答案就在里面，相信你能找到的。", "time": "昨天 15:45" }
       ],

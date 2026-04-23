@@ -193,36 +193,36 @@ const explosionTimeouts = ref([])
 
 // MZK images for mines
 const mzkImages = [
-  'https://faceround.cn/games/find-mzk/倒立mzk.png',
-  'https://faceround.cn/games/find-mzk/倒立走mzk.png',
-  'https://faceround.cn/games/find-mzk/偷听mzk.png',
-  'https://faceround.cn/games/find-mzk/右立mzk.png',
-  'https://faceround.cn/games/find-mzk/吐舌mzk.png',
-  'https://faceround.cn/games/find-mzk/呼啦啦mzk.png',
-  'https://faceround.cn/games/find-mzk/大眼mzk.png',
-  'https://faceround.cn/games/find-mzk/开心mzk.png',
-  'https://faceround.cn/games/find-mzk/怪核mzk.png',
-  'https://faceround.cn/games/find-mzk/惊吓mzk.png',
-  'https://faceround.cn/games/find-mzk/打坐mzk.png',
-  'https://faceround.cn/games/find-mzk/普通mzk.png',
-  'https://faceround.cn/games/find-mzk/生气mzk.png',
-  'https://faceround.cn/games/find-mzk/讲话mzk.png',
-  'https://faceround.cn/games/find-mzk/走路mzk.png',
-  'https://faceround.cn/games/find-mzk/跑mzk.png',
-  'https://faceround.cn/games/find-mzk/通通mzk.png',
-  'https://faceround.cn/games/find-mzk/飞行mzk.png',
-  'https://faceround.cn/games/find-mzk/鲨鱼mzk.png',
-  'https://faceround.cn/games/find-mzk/emumzk.png',
-  'https://faceround.cn/games/find-mzk/肌肉mzk.jpg'
+  '倒立mzk.png',
+  '倒立走mzk.png',
+  '偷听mzk.png',
+  '右立mzk.png',
+  '吐舌mzk.png',
+  '呼啦啦mzk.png',
+  '大眼mzk.png',
+  '开心mzk.png',
+  '怪核mzk.png',
+  '惊吓mzk.png',
+  '打坐mzk.png',
+  '普通mzk.png',
+  '生气mzk.png',
+  '讲话mzk.png',
+  '走路mzk.png',
+  '跑mzk.png',
+  '通通mzk.png',
+  '飞行mzk.png',
+  '鲨鱼mzk.png',
+  'emumzk.png',
+  '肌肉mzk.jpg'
 ]
 
 // Win settlement images
 const winImages = [
-  'https://faceround.cn/games/find-mzk/扫雷结算/扫雷结算1.jpg',
-  'https://faceround.cn/games/find-mzk/扫雷结算/扫雷结算2.jpg',
-  'https://faceround.cn/games/find-mzk/扫雷结算/扫雷结算3.jpg',
-  'https://faceround.cn/games/find-mzk/扫雷结算/扫雷结算4.jpg',
-  'https://faceround.cn/games/find-mzk/扫雷结算/扫雷结算5.jpg',
+  '扫雷结算/扫雷结算1.jpg',
+  '扫雷结算/扫雷结算2.jpg',
+  '扫雷结算/扫雷结算3.jpg',
+  '扫雷结算/扫雷结算4.jpg',
+  '扫雷结算/扫雷结算5.jpg',
 ]
 const winImage = ref('')
 
