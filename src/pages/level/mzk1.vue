@@ -2,15 +2,33 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGameStore } from '../../store/game.js'
+import { getImageUrl } from '../../config/constants.js'
 import LoadingScreen from '../../components/LoadingScreen.vue'
+import TopBar from '../../components/game/TopBar.vue'
+import ResultModal from '../../components/game/ResultModal.vue'
 
 const router = useRouter()
 const store = useGameStore()
 const found = ref(false)
 
-const BASE = 'https://faceround.cn/games/find-mzk/'
 const MZK = '普通mzk'
 const FILLERS = ['普通knd', '普通ena', '普通mfy']
+
+function imgUrl(name) {
+  return getImageUrl(`${name}.png`)
+}
+
+function goHome() {
+  router.push('/index')
+}
+
+function handleReplay() {
+  router.go(0)
+}
+
+function handleNext() {
+  router.push('/2')
+}
 
 // 原始文本，${图片占位} 为待随机填充的图片槽
 const rawText = `你这是什么眼神👁👁👁
@@ -70,10 +88,6 @@ function buildAssignments(n) {
 
 const assignments = buildAssignments(total)
 
-function imgUrl(key) {
-  return `${BASE}${encodeURIComponent(key)}.png`
-}
-
 function onFound() {
   if (found.value) return
   found.value = true
@@ -83,18 +97,14 @@ function onFound() {
 
 <template>
   <LoadingScreen text="正在找到晓山瑞希" />
-  <!-- 顶部说明栏 -->
-  <header class="top-bar">
-    <router-link class="home-link" to="/index">
-      <img class="home-link-icon" src="https://faceround.cn/games/find-mzk/%E5%A4%A7%E7%9C%BCmzk.png" alt="首页" />
-      <span class="home-link-text">首页</span>
-    </router-link>
-    <div class="hint">
-      <span class="hint-title">找到晓山瑞希</span>
-      <span class="hint-sub">晓山瑞希就藏在眼神里！点击他，你过关！</span>
-    </div>
-    <span class="level-tag">第 1 关</span>
-  </header>
+
+  <!-- 顶部栏 -->
+  <TopBar
+    title="找到晓山瑞希"
+    subtitle="晓山瑞希就藏在眼神里！点击他，你过关！"
+    level="1"
+    @home="goHome"
+  />
 
   <!-- 文本主体 -->
   <div class="text-wrap">
@@ -114,144 +124,19 @@ function onFound() {
   </div>
 
   <!-- 通关弹窗 -->
-  <Teleport to="body">
-    <div v-if="found" class="overlay">
-      <div class="result-wrapper">
-        <img
-          class="result-mzk"
-          src="https://faceround.cn/games/find-mzk/%E7%94%9F%E6%B0%94mzk.png"
-          alt="生气晓山瑞希"
-        />
-        <div class="result-card">
-          <h2 class="result-title">你找到晓山瑞希了！</h2>
-          <p class="result-sub">第 1 关 · 找到晓山瑞希 · 通关</p>
-          <div class="result-btns">
-            <button class="btn btn-stay" @click="found = false">重玩</button>
-            <button class="btn btn-home" @click="router.push('/index')">返回</button>
-            <button class="btn btn-next" @click="router.push('/2')">下一关</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Teleport>
+  <ResultModal
+    :show="found"
+    :success="true"
+    title="你找到晓山瑞希了！"
+    message="第 1 关 · 找到晓山瑞希 · 通关"
+    :show-next="true"
+    @replay="handleReplay"
+    @next="handleNext"
+    @home="goHome"
+  />
 </template>
 
 <style scoped>
-/* ── 顶部栏 ── */
-.top-bar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 12px;
-  background: rgba(255, 240, 245, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid #f6c8cc;
-}
-
-@media (max-width: 640px) {
-  .top-bar {
-    padding: 6px 10px;
-    gap: 8px;
-  }
-}
-
-.home-link {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 6px 12px;
-  border-radius: 20px;
-  background: #fff;
-  border: 1.5px solid #f6c8cc;
-  color: #c07090;
-  font-size: 0.82rem;
-  white-space: nowrap;
-  flex-shrink: 0;
-  touch-action: manipulation;
-  transition: background 0.15s;
-}
-
-@media (max-width: 640px) {
-  .home-link {
-    padding: 4px 8px;
-    font-size: 0.75rem;
-  }
-}
-
-.home-link:active {
-  background: #ffe0e8;
-}
-
-@media (hover: hover) {
-  .home-link:hover {
-    background: #ffe0e8;
-  }
-}
-
-.home-link-icon {
-  height: 1em;
-  width: auto;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.hint {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 0;
-}
-
-.hint-title {
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: #F6B1B5;}
-
-@media (max-width: 640px) {
-  .hint-title {
-    font-size: 0.8rem;  }
-}
-
-.hint-sub {
-  font-size: 0.72rem;
-  color: #aaa;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
-
-@media (max-width: 640px) {
-  .hint-sub {
-    font-size: 0.65rem;
-  }
-}
-
-.level-tag {
-  font-size: 0.78rem;
-  font-weight: bold;
-  color: #c07090;
-  background: #fff;
-  border: 1.5px solid #f6c8cc;
-  border-radius: 20px;
-  padding: 5px 10px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-@media (max-width: 640px) {
-  .level-tag {
-    font-size: 0.7rem;
-    padding: 4px 8px;
-  }
-}
-
 /* ── 文本区 ── */
 .text-wrap {
   padding: 24px 20px 48px;
@@ -265,7 +150,7 @@ function onFound() {
   word-break: break-all;
   line-height: 2;
   font-size: clamp(1rem, 4.5vw, 1.15rem);
-  color: #333;
+  color: var(--color-text-primary);
 }
 
 /* 所有角色图片（emoji大小，内联） */
@@ -280,116 +165,5 @@ function onFound() {
 /* 目标mzk — 可点击，但视觉上与其他角色图片一致 */
 .target-mzk {
   cursor: pointer;
-}
-
-/* ── 通关弹窗 ── */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 200;
-  padding: 20px;
-}
-
-.result-wrapper {
-  position: relative;
-  width: min(380px, 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.result-mzk {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  margin-bottom: -60px;
-  position: relative;
-  z-index: 2;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
-}
-
-.result-card {
-  position: relative;
-  z-index: 1;
-  background: #fff;
-  border-radius: 20px;
-  padding: 72px 24px 24px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
-}
-
-.result-title {
-  font-size: 1.3rem;
-  color: #F6B1B5;  margin: 0;
-}
-
-.result-sub {
-  font-size: 0.85rem;
-  color: #aaa;
-  margin: 0;
-}
-
-.result-btns {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  margin-top: 8px;
-}
-
-.btn {
-  width: 100%;
-  min-height: 48px;
-  border-radius: 32px;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-  transition: transform 0.15s;
-}
-
-@media (max-width: 640px) {
-  .btn {
-    min-height: 42px;
-    font-size: 0.9rem;
-  }
-}
-
-.btn:active {
-  transform: scale(0.97);
-}
-
-.btn-next {
-  background: linear-gradient(135deg, #F6B1B5, #d97ca8);
-  color: #fff;
-  font-weight: bold;
-}
-
-.btn-home {
-  background: transparent;
-  border: 2px solid #ddd;
-  color: #888;
-}
-
-.btn-stay {
-  background: transparent;
-  border: 2px solid #F6B1B5;
-  color: #c07090;
-  font-size: 0.9rem;
-}
-
-@media (min-width: 400px) {
-  .result-btns {
-    flex-direction: row;
-  }
 }
 </style>

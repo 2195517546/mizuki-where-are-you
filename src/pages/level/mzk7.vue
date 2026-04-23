@@ -16,6 +16,7 @@ import forumData from '../../data/forum.json'
 import level4MsgData from '../../data/messages.json'
 import level6MsgData from '../../data/level67/messages.json'
 import level6CommentData from '../../data/level67/comment.json'
+import TopBar from '../../components/game/TopBar.vue'
 
 const router = useRouter()
 const store = useGameStore()
@@ -702,17 +703,12 @@ function goHome() {
 
 <template>
   <!-- 顶部栏 -->
-  <header class="top-bar">
-    <router-link class="home-link" to="/index">
-      <img class="home-link-icon" src="https://faceround.cn/games/find-mzk/%E5%A4%A7%E7%9C%BCmzk.png" alt="首页" />
-      <span class="home-link-text">首页</span>
-    </router-link>
-    <div class="hint">
-      <span class="hint-title">找到晓山瑞希</span>
-      <span class="hint-sub">mzk的手机里有什么？</span>
-    </div>
-    <span class="level-tag">第 7 关</span>
-  </header>
+  <TopBar
+    title="找到晓山瑞希"
+    subtitle="mzk的手机里有什么？"
+    level="7"
+    @home="goHome"
+  />
 
   <!-- 全屏闪白（取消警告时） -->
   <div v-if="flashWhite" class="flash-white"></div>
@@ -1119,29 +1115,6 @@ function goHome() {
 </template>
 
 <style scoped>
-/* ─── 顶部栏 ─── */
-.top-bar {
-  display: flex; align-items: center; gap: 8px;
-  padding: 10px 14px; background: #fff; border-bottom: 1.5px solid #f6c8cc;
-  position: sticky; top: 0; z-index: 100;
-}
-.home-link {
-  text-decoration: none; display: flex; align-items: center; gap: 4px;
-  padding: 6px 12px; border-radius: 20px; background: #fff;
-  border: 1.5px solid #f6c8cc; color: #c07090; font-size: 0.82rem;
-  white-space: nowrap; flex-shrink: 0; transition: background 0.15s;
-}
-@media (max-width: 640px) { .home-link { padding: 4px 8px; font-size: 0.75rem; } }
-.home-link:active { background: #ffe0e8; }
-@media (hover: hover) { .home-link:hover { background: #ffe0e8; } }
-.home-link-icon { height: 1em; width: auto; object-fit: contain; flex-shrink: 0; }
-.home-link-text { }
-.hint { flex: 1; display: flex; flex-direction: column; align-items: center; min-width: 0; }
-.hint-title { font-size: 0.95rem; font-weight: bold; color: #F6B1B5; }
-@media (max-width: 640px) { .hint-title { font-size: 0.8rem; } }
-.hint-sub { font-size: 0.72rem; color: #aaa; }
-.level-tag { font-size: 0.75rem; color: #999; white-space: nowrap; }
-
 /* ─── 弹窗通用 ─── */
 .overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.7);

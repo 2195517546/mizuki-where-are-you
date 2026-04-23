@@ -6,6 +6,8 @@ import vediosData from '../../data/level67/vedios.json'
 import messagesData from '../../data/level67/messages.json'
 import commentData from '../../data/level67/comment.json'
 import LoadingScreen from '../../components/LoadingScreen.vue'
+import TopBar from '../../components/game/TopBar.vue'
+import ResultModal from '../../components/game/ResultModal.vue'
 
 const router = useRouter()
 const store = useGameStore()
@@ -292,22 +294,22 @@ function formatLikes(n) {
   if (n >= 1000) return (n / 1000).toFixed(1) + '千'
   return String(n)
 }
+
+function goHome() {
+  router.push('/index')
+}
 </script>
 
 <template>
   <LoadingScreen text="正在加载中" />
-  <!-- ═══ 游戏顶部栏（与其他关卡一致） ═══ -->
-  <header class="top-bar">
-    <router-link class="home-link" to="/index">
-      <img class="home-link-icon" src="https://faceround.cn/games/find-mzk/%E5%A4%A7%E7%9C%BCmzk.png" alt="首页" />
-      <span class="home-link-text">首页</span>
-    </router-link>
-    <div class="hint">
-      <span class="hint-title">接近晓山瑞希</span>
-      <span class="hint-sub">我想看晓山瑞希发布的mv！</span>
-    </div>
-    <span class="level-tag">第 6 关</span>
-  </header>
+
+  <!-- 游戏顶部栏 -->
+  <TopBar
+    title="接近晓山瑞希"
+    subtitle="我想看晓山瑞希发布的mv！"
+    level="6"
+    @home="goHome"
+  />
 
   <!-- ═══ 解锁弹窗 ═══ -->
   <Teleport to="body">
@@ -577,77 +579,19 @@ function formatLikes(n) {
   </Teleport>
 
   <!-- ═══ 通关弹窗 ═══ -->
-  <Teleport to="body">
-    <div v-if="won" class="overlay">
-      <div class="result-wrapper">
-        <img class="result-mzk" :src="`${BASE}开心mzk.png`" alt="开心mzk" />
-        <div class="result-card">
-          <h2 class="result-title">你找到线索了！</h2>
-          <p class="result-sub">第 6 关 · 小心晓山瑞希 · 通关</p>
-          <div class="result-btns">
-            <button class="btn btn-home" @click="router.push('/index')">返回首页</button>
-            <button class="btn btn-next" @click="goToEndScreen">继续</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Teleport>
-
+  <ResultModal
+    :show="won"
+    :success="true"
+    title="你找到线索了！"
+    message="第 6 关 · 小心晓山瑞希 · 通关"
+    :show-next="true"
+    @home="goHome"
+    @next="goToEndScreen"
+  />
 </template>
 
 <style scoped>
-/* ── 游戏顶部栏（与其他关卡一致） ── */
-.top-bar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 12px;
-  background: rgba(255, 240, 245, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid #f6c8cc;
-}
-@media (max-width: 640px) {
-  .top-bar { padding: 6px 10px; gap: 8px; }
-}
-.home-link {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 6px 12px;
-  border-radius: 20px;
-  background: #fff;
-  border: 1.5px solid #f6c8cc;
-  color: #c07090;
-  font-size: 0.82rem;
-  white-space: nowrap;
-  flex-shrink: 0;
-  touch-action: manipulation;
-  transition: background 0.15s;
-}
-@media (max-width: 640px) {
-  .home-link { padding: 4px 8px; font-size: 0.75rem; }
-}
-.home-link:active { background: #ffe0e8; }
-@media (hover: hover) { .home-link:hover { background: #ffe0e8; } }
-.home-link-icon { height: 1em; width: auto; object-fit: contain; flex-shrink: 0; }
-.hint { flex: 1; display: flex; flex-direction: column; align-items: center; min-width: 0; }
-.hint-title { font-size: 0.95rem; font-weight: bold; color: #F6B1B5; }
-@media (max-width: 640px) { .hint-title { font-size: 0.8rem; } }
-.hint-sub { font-size: 0.72rem; color: #aaa; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
-@media (max-width: 640px) { .hint-sub { font-size: 0.65rem; } }
-.level-tag {
-  font-size: 0.78rem; font-weight: bold; color: #c07090; background: #fff;
-  border: 1.5px solid #f6c8cc; border-radius: 20px; padding: 5px 10px;
-  white-space: nowrap; flex-shrink: 0;
-}
-@media (max-width: 640px) { .level-tag { font-size: 0.7rem; padding: 4px 8px; } }
-
-/* ── 解锁弹窗 ── */
+/* ── B站风格容器 ── */
 .overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.55);
   display: flex; align-items: center; justify-content: center; z-index: 200; padding: 20px;
@@ -941,29 +885,4 @@ function formatLikes(n) {
 .chat-send-btn:active { opacity: 0.7; }
 
 /* ── Toast ── */
-.toast {
-  position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  background: rgba(0,0,0,0.75); color: #fff; padding: 10px 24px;
-  border-radius: 20px; font-size: 0.85rem; z-index: 999; pointer-events: none;
-}
-.toast-enter-active, .toast-leave-active { transition: opacity 0.3s; }
-.toast-enter-from, .toast-leave-to { opacity: 0; }
-
-/* ── 通关弹窗 ── */
-.result-wrapper {
-  position: relative; width: min(380px, 100%);
-  display: flex; flex-direction: column; align-items: center;
-}
-.result-mzk {
-  width: 120px; height: 120px; object-fit: contain; margin-bottom: -60px;
-  position: relative; z-index: 2; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
-}
-.result-card {
-  position: relative; z-index: 1; background: #fff; border-radius: 20px;
-  padding: 72px 24px 24px; width: 100%;
-  display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;
-}
-.result-title { font-size: 1.3rem; color: #FF679A; margin: 0; }
-.result-sub { font-size: 0.85rem; color: #aaa; margin: 0; }
-.result-btns { display: flex; gap: 10px; width: 100%; margin-top: 8px; }
 </style>
